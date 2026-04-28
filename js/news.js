@@ -34,6 +34,15 @@ function buildBodyHtml(item, body) {
   return '<strong>' + paperTitleHtml + '</strong>' + (body ? '<br>' + body : '');
 }
 
+// item.images（画像パスの配列）からサムネイル列のHTMLを組み立てる
+function buildImagesHtml(item, sizeClass) {
+  if (!item.images || !item.images.length) return '';
+  return '<div class="' + sizeClass + '">' +
+    item.images.map(function (p) {
+      return '<img src="' + escapeHtml(p) + '" alt="" loading="lazy">';
+    }).join('') + '</div>';
+}
+
 var currentYear = '';
 
 function buildYearTabs(data, lang) {
@@ -88,7 +97,8 @@ function renderNews(data, lang) {
         '<span class="date">' + item.date + '</span>' +
       '</div>' +
       '<h2>' + buildTitleHtml(item, title) + '</h2>' +
-      '<p class="preview">' + buildBodyHtml(item, body) + '</p>';
+      '<p class="preview">' + buildBodyHtml(item, body) + '</p>' +
+      buildImagesHtml(item, 'news-thumbs');
     card.style.cursor = 'pointer';
     card.addEventListener('click', function () { openModal(index, lang); });
     // カード内のリンククリックではモーダルを開かない
@@ -111,7 +121,7 @@ function openModal(index, lang) {
   document.getElementById('modal-category').textContent = category;
   document.getElementById('modal-title').innerHTML = buildTitleHtml(item, title);
   document.getElementById('modal-date').textContent = item.date;
-  document.getElementById('modal-content').innerHTML = buildBodyHtml(item, body);
+  document.getElementById('modal-content').innerHTML = buildBodyHtml(item, body) + buildImagesHtml(item, 'news-images-large');
   document.getElementById('modal').classList.remove('hidden');
   document.body.style.overflow = 'hidden';
 }

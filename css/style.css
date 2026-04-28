@@ -856,6 +856,35 @@ img {
   margin-top: 0.5rem;
 }
 
+.news-thumbs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 0.75rem;
+}
+
+.news-thumbs img {
+  height: 64px;
+  width: auto;
+  max-width: 96px;
+  border-radius: 3px;
+  object-fit: cover;
+  border: 1px solid #eee;
+}
+
+.news-images-large {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.news-images-large img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
 /* ========================================
    Members Page (members.html)
    ======================================== */
