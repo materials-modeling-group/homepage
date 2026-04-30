@@ -139,10 +139,14 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
+// GitHub上の news.json を直接読みに行く。これにより、NIMSサーバー等にホストしても
+// ニュース更新（Admin → GAS → GitHub repo）の結果が即座に公開ページに反映される。
+// （ホスト先を問わず常に GitHub の最新を参照する）
+var NEWS_DATA_URL = 'https://raw.githubusercontent.com/materials-modeling-group/homepage/main/data/news.json';
+
 document.addEventListener('DOMContentLoaded', function () {
   var lang = detectLang();
-  var basePath = location.pathname.substring(0, location.pathname.lastIndexOf('/') + 1);
-  fetch(basePath + 'data/news.json')
+  fetch(NEWS_DATA_URL)
     .then(function (res) {
       if (!res.ok) throw new Error('Failed to load news.json: ' + res.status);
       return res.json();
