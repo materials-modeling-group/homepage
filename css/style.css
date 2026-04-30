@@ -630,26 +630,15 @@ img {
 }
 
 .top-member-card {
-  background-color: #fff;
-  border-radius: 4px;
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
-  overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 1.25rem 1rem 1rem;
-  text-align: center;
-  border: 1px solid #e0e0e0;
+  align-items: flex-start;
+  padding: 0.5rem 0;
+  text-align: left;
 }
 
 .section-alt .top-member-card {
-  background-color: #fff;
-}
-
-.top-member-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.1);
+  background-color: transparent;
 }
 
 .top-member-photo {
@@ -671,7 +660,7 @@ img {
 .top-member-body {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   flex: 1;
   width: 100%;
 }
@@ -708,7 +697,8 @@ img {
 .top-member-buttons {
   display: flex;
   gap: 0.5rem;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
 }
 
 .personal-page-btn {
