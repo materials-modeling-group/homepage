@@ -19,7 +19,10 @@ NEWS_PATH = DATA_DIR / "news.json"
 
 CROSSREF_API = "https://api.crossref.org/works"
 MAILTO = "DEMURA.Masahiko@nims.go.jp"
-LOOKBACK_DAYS = 90
+# 過去N日間に出版された論文を検索対象とする。
+# CrossRefへの登録に時間がかかる場合や、一時的にワークフローが止まっていた場合に
+# 取りこぼしが発生しないよう、十分な余裕を持たせる。既存DOIで重複は除外される。
+LOOKBACK_DAYS = 365
 
 
 def load_json(path):
