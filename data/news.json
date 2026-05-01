@@ -127,6 +127,19 @@
     "body_en": ""
   },
   {
+    "date": "2025-12-15",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "出村雅彦グループリーダーが共著の論文がScience and Technology of Advanced Materials: Methodsに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Research data express: a data accumulation and sharing system for digital transformation in materials research",
+    "doi": "10.1080/27660400.2025.2597702",
+    "body": "著者：Jun Fujima, Hideki Yoshikawa, Hiroko Nagao, Hiroaki Tosaka, Takuya Kadohira, Masahiko Demura<br>ジャーナル：Science and Technology of Advanced Materials: Methods<br>巻号：Vol. 5, Issue 1<br>論文番号：2597702<br>オンライン公開：2025年12月15日<br>DOI：10.1080/27660400.2025.2597702",
+    "body_en": "",
+    "images": []
+  },
+  {
     "date": "2025-12-08",
     "category": "お知らせ",
     "category_en": "Announcement",
@@ -161,6 +174,58 @@
     "title_en": "",
     "body": "講演タイトル：Materials DX Platform initiatives in Japan<br>学会名：Meeting with EU Science Counsellors<br>日時：2025年11月26日<br>発表者：DEMURA, Masahiko",
     "body_en": ""
+  },
+  {
+    "date": "2025-11-24",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "柿沼洋客員研究員の論文がECS Meeting Abstractsに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Video Imaging of Microscopic Hydrogen Diffusion at Grain Boundaries of Pure Ni",
+    "doi": "10.1149/ma2025-02121107mtgabs",
+    "body": "著者：Hiroshi Kakinuma, Motomichi Koyama, Rama Srinivas Varanasi, Saya Ajito, Eiji Akiyama<br>ジャーナル：ECS Meeting Abstracts<br>巻号：Vol. MA2025-02, Issue 12<br>論文番号：1107-1107<br>オンライン公開：2025年11月24日<br>DOI：10.1149/ma2025-02121107mtgabs",
+    "body_en": "",
+    "images": []
+  },
+  {
+    "date": "2025-11-20",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "渡邊育夢主幹研究員が共著の論文がScience and Technology of Advanced Materials: Methodsに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Computational microstructure design for mechanical property optimization: a review",
+    "doi": "10.1080/27660400.2025.2581359",
+    "body": "著者：Keita Kambayashi, Ikumu Watanabe<br>ジャーナル：Science and Technology of Advanced Materials: Methods<br>巻号：Vol. 5, Issue 1<br>論文番号：2581359<br>オンライン公開：2025年11月20日<br>DOI：10.1080/27660400.2025.2581359",
+    "body_en": "",
+    "images": []
+  },
+  {
+    "date": "2025-11-19",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "渡邊育夢主幹研究員が共著の論文がScience Roboticsに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Metamaterial robotics",
+    "doi": "10.1126/scirobotics.adx1519",
+    "body": "著者：Xiaoyang Zheng, Yuhao Jiang, Mustafa Mete, Jingjing Li, Ikumu Watanabe, Takayuki Yamada, Jamie Paik<br>ジャーナル：Science Robotics<br>巻号：Vol. 10, Issue 108<br>論文番号：eadx1519<br>オンライン公開：2025年11月19日<br>DOI：10.1126/scirobotics.adx1519",
+    "body_en": "",
+    "images": []
+  },
+  {
+    "date": "2025-10-29",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "出村雅彦グループリーダーが共著の論文がScience and Technology of Advanced Materials: Methodsに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Designing a unified data structure for solid-electrolyte research projects",
+    "doi": "10.1080/27660400.2025.2568365",
+    "body": "著者：Yasuhiro Fujiwara, Kota Suzuki, Satoshi Hori, Yoshiyuki Inaguma, Akitoshi Hayashi, Masaki Azuma, Yasutoshi Iriyama, Hirotoshi Yamada, Tetsuhiro Katsumata, Kazunori Takada, Ryoji Kanno, Masahiko Demura<br>ジャーナル：Science and Technology of Advanced Materials: Methods<br>巻号：Vol. 5, Issue 1<br>論文番号：2568365<br>オンライン公開：2025年10月29日<br>DOI：10.1080/27660400.2025.2568365",
+    "body_en": "",
+    "images": []
   },
   {
     "date": "2025-10-24",
@@ -219,6 +284,19 @@
     "body_en": ""
   },
   {
+    "date": "2025-09-22",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "石井真史主席研究員が共著の論文がScience and Technology of Advanced Materials: Methodsに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "NIMS polymer database PoLyInfo (III): modularizing ShEx schemas for descriptors and properties in PoLyInfoRDF",
+    "doi": "10.1080/27660400.2025.2544516",
+    "body": "著者：Koichi Sakamoto, Masashi Ishii<br>ジャーナル：Science and Technology of Advanced Materials: Methods<br>巻号：Vol. 5, Issue 1<br>論文番号：2544516<br>オンライン公開：2025年9月22日<br>DOI：10.1080/27660400.2025.2544516",
+    "body_en": "",
+    "images": []
+  },
+  {
     "date": "2025-09-20",
     "category": "お知らせ",
     "category_en": "Announcement",
@@ -253,6 +331,19 @@
     "title_en": "",
     "body": "講演タイトル：マテリアル分野におけるデジタル革新の最近の潮流<br>学会名：RISMEデータ活用産学連携協議会プロジェクト・テーブル<br>日時：2025年9月1日 - 2025年9月2日<br>発表者：出村 雅彦",
     "body_en": ""
+  },
+  {
+    "date": "2025-08-07",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "出村雅彦グループリーダーが共著の論文がに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Experimental Demonstration of Creep Life Improvement in Welded Joints through Optimized Welding Conditions",
+    "doi": "10.21203/rs.3.rs-6886960/v1",
+    "body": "著者：Hitoshi IZUNO, Masahiko Demura, Kenji Nagata, Daisuke Abe, Keisuke Torigata<br>オンライン公開：2025年8月7日<br>DOI：10.21203/rs.3.rs-6886960/v1",
+    "body_en": "",
+    "images": []
   },
   {
     "date": "2025-08-05",
@@ -300,6 +391,45 @@
     "body_en": ""
   },
   {
+    "date": "2025-07-14",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "出村雅彦グループリーダーが共著の論文がScience and Technology of Advanced Materials: Methodsに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "A unified model for metallic materials reliability data and its application in NIMS metallic materials database (Kinzoku)",
+    "doi": "10.1080/27660400.2025.2518745",
+    "body": "著者：Asahiko Matsuda, Masahiko Demura, Masayoshi Yamazaki, Takuya Kadohira, Toshihiro Ashino, Yoshiyuki Furuya, Kota Sawada, Nobutaka Nishikawa<br>ジャーナル：Science and Technology of Advanced Materials: Methods<br>巻号：Vol. 5, Issue 1<br>論文番号：2518745<br>オンライン公開：2025年7月14日<br>DOI：10.1080/27660400.2025.2518745",
+    "body_en": "",
+    "images": []
+  },
+  {
+    "date": "2025-07-02",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "石井真史主席研究員が共著の論文がnpj Computational Materialsに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Discovery of liquid crystalline polymers with high thermal conductivity using machine learning",
+    "doi": "10.1038/s41524-025-01671-w",
+    "body": "著者：Hayato Maeda, Stephen Wu, Rika Marui, Erina Yoshida, Kan Hatakeyama-Sato, Yuta Nabae, Shiori Nakagawa, Meguya Ryu, Ryohei Ishige, Yoh Noguchi, Yoshihiro Hayashi, Masashi Ishii, Isao Kuwajima, Felix Jiang, Xuan Thang Vu, Sven Ingebrandt, Masatoshi Tokita, Junko Morikawa, Ryo Yoshida, Teruaki Hayakawa<br>ジャーナル：npj Computational Materials<br>巻号：Vol. 11, Issue 1<br>論文番号：205<br>オンライン公開：2025年7月2日<br>DOI：10.1038/s41524-025-01671-w",
+    "body_en": "",
+    "images": []
+  },
+  {
+    "date": "2025-06-19",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "石井真史主席研究員が共著の論文がnpj Computational Materialsに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Author Correction: Scaling Law of Sim2Real transfer learning in expanding computational materials databases for real-world predictions",
+    "doi": "10.1038/s41524-025-01679-2",
+    "body": "著者：Shunya Minami, Yoshihiro Hayashi, Stephen Wu, Kenji Fukumizu, Hiroki Sugisawa, Masashi Ishii, Isao Kuwajima, Kazuya Shiratori, Ryo Yoshida<br>ジャーナル：npj Computational Materials<br>巻号：Vol. 11, Issue 1<br>論文番号：188<br>オンライン公開：2025年6月19日<br>DOI：10.1038/s41524-025-01679-2",
+    "body_en": "",
+    "images": []
+  },
+  {
     "date": "2025-06-15",
     "category": "お知らせ",
     "category_en": "Announcement",
@@ -307,6 +437,32 @@
     "title_en": "",
     "body": "講演タイトル：Data-driven, chemistry-oriented search for new thermoelectric materials<br>学会名：The 41st International and 7th Asian Conference on Thermoelectrics 2025 (ITS Summer School 2025)<br>日時：2025年6月15日 - 2025年6月19日<br>発表者：KATSURA, Yukari",
     "body_en": ""
+  },
+  {
+    "date": "2025-06-01",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "柿沼洋客員研究員が共著の論文がCorrosion Scienceに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Stability of electrochemical hydrogen charging in NaCl aqueous solution containing NH4SCN: Effect of changes in solution chemistry",
+    "doi": "10.1016/j.corsci.2025.112843",
+    "body": "著者：Saya Ajito, Yusuke Kabasawa, Hiroshi Kakinuma, Motomichi Koyama, Eiji Akiyama<br>ジャーナル：Corrosion Science<br>巻号：Vol. 249<br>論文番号：112843<br>オンライン公開：2025年6月1日<br>DOI：10.1016/j.corsci.2025.112843",
+    "body_en": "",
+    "images": []
+  },
+  {
+    "date": "2025-05-24",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "石井真史主席研究員が共著の論文がnpj Computational Materialsに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Scaling law of Sim2Real transfer learning in expanding computational materials databases for real-world predictions",
+    "doi": "10.1038/s41524-025-01606-5",
+    "body": "著者：Shunya Minami, Yoshihiro Hayashi, Stephen Wu, Kenji Fukumizu, Hiroki Sugisawa, Masashi Ishii, Isao Kuwajima, Kazuya Shiratori, Ryo Yoshida<br>ジャーナル：npj Computational Materials<br>巻号：Vol. 11, Issue 1<br>論文番号：146<br>オンライン公開：2025年5月24日<br>DOI：10.1038/s41524-025-01606-5",
+    "body_en": "",
+    "images": []
   },
   {
     "date": "2025-05-21",
@@ -318,6 +474,32 @@
     "body_en": ""
   },
   {
+    "date": "2025-05-01",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "戸田佳明主幹研究員が共著の論文がMaterials Science and Engineering: Aに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Deformation mechanisms of hexagonal close-packed-multi-principal element alloys (HCP-MPEAs) with equiaxed structures",
+    "doi": "10.1016/j.msea.2025.148143",
+    "body": "著者：S.J. Liang, T. Yoshino, R. Matusmoto, R. Sahara, Y. Toda, S. Matsunaga, G. Miyamoto, Y. Yamabe-Mitarai<br>ジャーナル：Materials Science and Engineering: A<br>巻号：Vol. 929<br>論文番号：148143<br>オンライン公開：2025年5月1日<br>DOI：10.1016/j.msea.2025.148143",
+    "body_en": "",
+    "images": []
+  },
+  {
+    "date": "2025-05-01",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "渡邊育夢主幹研究員が共著の論文がMaterials & Designに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Computational design of mechanical metamaterials through misaligned periodic microstructure",
+    "doi": "10.1016/j.matdes.2025.113819",
+    "body": "著者：Jiaxin Zhou, Ikumu Watanabe, Keita Kambayashi<br>ジャーナル：Materials & Design<br>巻号：Vol. 253<br>論文番号：113819<br>オンライン公開：2025年5月1日<br>DOI：10.1016/j.matdes.2025.113819",
+    "body_en": "",
+    "images": []
+  },
+  {
     "date": "2025-04-25",
     "category": "受賞",
     "category_en": "Award",
@@ -325,6 +507,19 @@
     "title_en": "Principal Researcher Ikumu Watanabe selected as Science Direct \"Most prolific reviewers\"",
     "body": "渡邊育夢主幹研究員がScience Direct「The 2024 Materials & Design Most prolific reviewers」に選出されました。科学分野における知識の進展に対する貢献が評価されました。",
     "body_en": "Principal Researcher Ikumu Watanabe was selected as Science Direct \"The 2024 Materials & Design Most prolific reviewers.\" His contributions to the advancement of knowledge in the scientific field were recognized."
+  },
+  {
+    "date": "2025-04-22",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "桂ゆかり主任研究員が共著の論文がScience and Technology of Advanced Materials: Methodsに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Data-driven analysis and visualization of dielectric properties curated from scientific literature",
+    "doi": "10.1080/27660400.2025.2485018",
+    "body": "著者：Tomoki Murata, Naoto Saito, Eiji Koyama, Ton Nu Thanh Phuong, Ryusuke Misawa, Satoshi Yokomizo, Tomoya Mato, Yu Takada, Sakyo Hirose, Yukari Katsura<br>ジャーナル：Science and Technology of Advanced Materials: Methods<br>巻号：Vol. 5, Issue 1<br>論文番号：2485018<br>オンライン公開：2025年4月22日<br>DOI：10.1080/27660400.2025.2485018",
+    "body_en": "",
+    "images": []
   },
   {
     "date": "2025-04-16",
@@ -372,6 +567,19 @@
     "body_en": ""
   },
   {
+    "date": "2025-04-11",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "石井真史主席研究員の論文がJournal of Synchrotron Radiationに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Global cross-database search system for X-ray absorption spectra",
+    "doi": "10.1107/s1600577525002206",
+    "body": "著者：Masashi Ishii, Asahiko Matsuda, Koichi Sakamoto, Shohei Yamashita, Yasuhiro Niwa, Yasuhiro Inada<br>ジャーナル：Journal of Synchrotron Radiation<br>巻号：Vol. 32, Issue 3<br>論文番号：661-668<br>オンライン公開：2025年4月11日<br>DOI：10.1107/s1600577525002206",
+    "body_en": "",
+    "images": []
+  },
+  {
     "date": "2025-04-08",
     "category": "お知らせ",
     "category_en": "Announcement",
@@ -397,6 +605,32 @@
     "title_en": "",
     "body": "研究課題：固体粒子の混入した酸性超臨界水による金属材料の酸化・腐食挙動<br>研究種目：基盤研究(C)<br>課題番号：25K08550<br>研究期間：2025-04-01 – 2028-03-31<br>配分額：4,680千円 (直接経費: 3,600千円、間接経費: 1,080千円)",
     "body_en": ""
+  },
+  {
+    "date": "2025-04-01",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "出村雅彦グループリーダーが共著の論文がTetsu-to-Haganeに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Federated Learning of Creep Rupture Time and High Temperature                        Tensile Strength Prediction Models",
+    "doi": "10.2355/tetsutohagane.tetsu-2024-124",
+    "body": "著者：Junya Sakurai, Keisuke Torigata, Manabu Matsunaga, Naoto Takanashi, Shinya Hibino, Kenichi Kizu, Akira Morita, Masahiro Inomoto, Nobuaki Shimohata, Kodai Toyota, Tadaaki Nakamura, Keita Hashimoto, Tatsuya Okubo, Loic Beheshti, Vincent Richard, Masahiko Demura<br>ジャーナル：Tetsu-to-Hagane<br>巻号：Vol. 111, Issue 5<br>論文番号：TETSU-2024-124<br>オンライン公開：2025年4月1日<br>DOI：10.2355/tetsutohagane.tetsu-2024-124",
+    "body_en": "",
+    "images": []
+  },
+  {
+    "date": "2025-04-01",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "渡邊育夢主幹研究員が共著の論文がMaterials & Designに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Spring-based mechanical metamaterials with deep-learning-accelerated design",
+    "doi": "10.1016/j.matdes.2025.113800",
+    "body": "著者：Xiaofeng Guo, Xiaoyang Zheng, Jiaxin Zhou, Takayuki Yamada, Yong Yi, Ikumu Watanabe<br>ジャーナル：Materials & Design<br>巻号：Vol. 252<br>論文番号：113800<br>オンライン公開：2025年4月1日<br>DOI：10.1016/j.matdes.2025.113800",
+    "body_en": "",
+    "images": []
   },
   {
     "date": "2025-03-23",
@@ -444,6 +678,19 @@
     "body_en": ""
   },
   {
+    "date": "2025-03-01",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "渡邊育夢主幹研究員が共著の論文がJournal of the Mechanics and Physics of Solidsに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Gradient-enhanced ductile fracture constitutive modeling in implicit two-scale finite element analysis",
+    "doi": "10.1016/j.jmps.2025.106025",
+    "body": "著者：Tianwen Tan, Ikumu Watanabe<br>ジャーナル：Journal of the Mechanics and Physics of Solids<br>巻号：Vol. 196<br>論文番号：106025<br>オンライン公開：2025年3月1日<br>DOI：10.1016/j.jmps.2025.106025",
+    "body_en": "",
+    "images": []
+  },
+  {
     "date": "2025-02-12",
     "category": "お知らせ",
     "category_en": "Announcement",
@@ -462,6 +709,19 @@
     "body_en": ""
   },
   {
+    "date": "2025-02-01",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "戸田佳明主幹研究員が共著の論文がMaterials Science and Engineering: Aに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "The impact of grain boundary serration treatments on the creep deformation of Udimet-720Li superalloy",
+    "doi": "10.1016/j.msea.2024.147729",
+    "body": "著者：Tso-Wei Chen, Bo-Chen Wu, Yung-Chang Kang, Hideyuki Murakami, Yoshiaki Toda, Tsai-Fu Chung, R. Devesh Kumar Misra, An-Chou Yeh<br>ジャーナル：Materials Science and Engineering: A<br>巻号：Vol. 924<br>論文番号：147729<br>オンライン公開：2025年2月1日<br>DOI：10.1016/j.msea.2024.147729",
+    "body_en": "",
+    "images": []
+  },
+  {
     "date": "2025-01-28",
     "category": "お知らせ",
     "category_en": "Announcement",
@@ -469,6 +729,32 @@
     "title_en": "",
     "body": "講演タイトル：Truly FAIR Service for the International XAS Community: A Materials Overview through IXDB<br>学会名：DAPHNE4NFDI TA1: \"Data for science lecture series\"<br>日時：2025年1月28日<br>発表者：ISHII, Masashi",
     "body_en": ""
+  },
+  {
+    "date": "2025-01-01",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "桂ゆかり主任研究員が共著の論文がJournal of Materials Chemistry Aに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Achieving high thermoelectric performance of triple half-Heusler compositions enabled by high-throughput screening",
+    "doi": "10.1039/d5ta05156h",
+    "body": "著者：Kazuki Imasato, Haruhiko Morito, Hidetoshi Miyazaki, Fumikazu Hosono, Philipp Sauerschnig, Masanobu Miyata, Takao Ishida, Atsushi Yamamoto, Yukari Katsura, Michihiro Ohta<br>ジャーナル：Journal of Materials Chemistry A<br>巻号：Vol. 13, Issue 45<br>論文番号：39042-39052<br>オンライン公開：2025年1月1日<br>DOI：10.1039/d5ta05156h",
+    "body_en": "",
+    "images": []
+  },
+  {
+    "date": "2025-01-01",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "柿沼洋客員研究員が共著の論文がActa Materialiaに掲載されました",
+    "title_en": "",
+    "url": "",
+    "paper_title": "Grain boundary nanochemistry and intergranular corrosion of Fe-0.01wt.%P alloy: Roles of elemental segregations and misorientation",
+    "doi": "10.1016/j.actamat.2024.120577",
+    "body": "著者：Saya Ajito, Kazuya Tojima, Hiroshi Kakinuma, Kohei Ikeda, Yongjie Zhang, Tomohiko Hojo, Goro Miyamoto, Motomichi Koyama, Tadashi Furuhara, Eiji Akiyama<br>ジャーナル：Acta Materialia<br>巻号：Vol. 283<br>論文番号：120577<br>オンライン公開：2025年1月1日<br>DOI：10.1016/j.actamat.2024.120577",
+    "body_en": "",
+    "images": []
   },
   {
     "date": "",
