@@ -34,12 +34,22 @@ function buildBodyHtml(item, body) {
   return '<strong>' + paperTitleHtml + '</strong>' + (body ? '<br>' + body : '');
 }
 
+// 画像パスは news.json で相対パス("images/news/foo.jpg") のまま入っているので、
+// GitHub raw 経由で配信するために絶対URL化する。NIMSサーバー等にホストしても画像が表示される。
+var GITHUB_RAW_BASE = 'https://raw.githubusercontent.com/materials-modeling-group/homepage/main/';
+
+function resolveImageUrl(p) {
+  if (!p) return '';
+  if (/^https?:\/\//i.test(p)) return p;
+  return GITHUB_RAW_BASE + p.replace(/^\//, '');
+}
+
 // item.images（画像パスの配列）からサムネイル列のHTMLを組み立てる
 function buildImagesHtml(item, sizeClass) {
   if (!item.images || !item.images.length) return '';
   return '<div class="' + sizeClass + '">' +
     item.images.map(function (p) {
-      return '<img src="' + escapeHtml(p) + '" alt="" loading="lazy">';
+      return '<img src="' + escapeHtml(resolveImageUrl(p)) + '" alt="" loading="lazy">';
     }).join('') + '</div>';
 }
 
@@ -142,7 +152,7 @@ document.addEventListener('keydown', function (event) {
 // GitHub上の news.json を直接読みに行く。これにより、NIMSサーバー等にホストしても
 // ニュース更新（Admin → GAS → GitHub repo）の結果が即座に公開ページに反映される。
 // （ホスト先を問わず常に GitHub の最新を参照する）
-var NEWS_DATA_URL = 'https://raw.githubusercontent.com/materials-modeling-group/homepage/main/data/news.json';
+var NEWS_DATA_URL = GITHUB_RAW_BASE + 'data/news.json';
 
 document.addEventListener('DOMContentLoaded', function () {
   var lang = detectLang();
