@@ -199,17 +199,26 @@
     (function() {
       var el = document.getElementById('top-news');
       if (!el) return;
-      var base = location.pathname.substring(0, location.pathname.lastIndexOf('/') + 1);
-      fetch(base + 'data/news.json')
+      var lang = location.pathname.includes('-en.html') ? 'en' : 'ja';
+      var newsPage = lang === 'en' ? 'news-en.html' : 'news.html';
+      var NEWS_LIST_URL = 'https://raw.githubusercontent.com/materials-modeling-group/homepage/main/data/news.json';
+      function escapeHtml(s) { var d = document.createElement('div'); d.textContent = s == null ? '' : s; return d.innerHTML; }
+      fetch(NEWS_LIST_URL)
         .then(function(r) { return r.json(); })
         .then(function(data) {
-          var lang = location.pathname.includes('-en.html') ? 'en' : 'ja';
           data.slice(0, 5).forEach(function(item) {
             var title = lang === 'en' ? (item.title_en || item.title) : item.title;
-            var div = document.createElement('div');
-            div.className = 'news-timeline-item';
-            div.innerHTML = '<span class="date">' + (item.date || '') + '</span><span class="news-title">' + title + '</span>';
-            el.appendChild(div);
+            var a = document.createElement('a');
+            a.className = 'news-timeline-item';
+            if (item.url) {
+              a.href = item.url;
+              a.target = '_blank';
+              a.rel = 'noopener';
+            } else {
+              a.href = newsPage;
+            }
+            a.innerHTML = '<span class="date">' + escapeHtml(item.date || '') + '</span><span class="news-title">' + escapeHtml(title) + '</span>';
+            el.appendChild(a);
           });
           el.classList.add('visible');
         });
