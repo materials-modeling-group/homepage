@@ -55,6 +55,11 @@ function handleSubmit(event) {
   }
 
   if (isValid) {
+    const recipient = 'DEMURA.Masahiko@nims.go.jp';
+    const body = `お名前: ${name}\nメールアドレス: ${email}\n\n${message}`;
+    const mailto = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    window.location.href = mailto;
+
     document.getElementById('form-container').classList.add('hidden');
     document.getElementById('success-container').classList.remove('hidden');
   }
