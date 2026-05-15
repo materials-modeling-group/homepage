@@ -2205,21 +2205,6 @@ img {
     height: 70px;
   }
 
-  .top-member-wrapper {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 0.5rem;
-  }
-
-  .top-member-leader,
-  .top-member-grid {
-    display: contents;
-  }
-
-  .top-member-leader .top-member-card {
-    width: auto;
-  }
-
   .top-member-card {
     padding: 0.75rem 0.4rem 0.5rem;
   }
