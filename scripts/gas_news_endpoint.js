@@ -93,8 +93,21 @@ function getNewsFromGitHub() {
 // ── 追加 ──
 function addNews(newsItem) {
   var file = getGitHubFile();
+  var newTitle = (newsItem.title || "").trim();
+  var newDate = newsItem.date || "";
+
+  // 重複ガード: 同一タイトル＋同一日付の既存エントリがあれば追加せずスキップ
+  if (newTitle) {
+    for (var i = 0; i < file.list.length; i++) {
+      var existing = file.list[i];
+      if ((existing.title || "").trim() === newTitle && (existing.date || "") === newDate) {
+        return "duplicate-skipped";
+      }
+    }
+  }
+
   var entry = {
-    date: newsItem.date || "",
+    date: newDate,
     category: newsItem.category || "",
     category_en: newsItem.category_en || "",
     title: newsItem.title || "",
