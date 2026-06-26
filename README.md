@@ -15,7 +15,6 @@ homepage/
 ├── index.html / index-en.html          Home（日英）
 ├── research.html / research-en.html    Research
 ├── members.html / members-en.html      Members
-├── members2.html / members2-en.html    Members（旧メンバー）
 ├── news.html / news-en.html            News
 ├── contact.html / contact-en.html      Contact
 ├── css/style.css                       スタイルシート
