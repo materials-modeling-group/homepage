@@ -40,12 +40,10 @@
     <div class="container">
       <div class="page-header">
         <h1>Research</h1>
-        <p>R&amp;D of modeling technologies connecting the four elements of materials engineering</p>
       </div>
 
-      <div class="research-intro fade-in-up">
-        <p>Our Materials Modeling Group conducts research on modeling technologies that connect the four elements of materials engineering. Through modeling technologies, we replace experiments with computations, accelerating the analysis of forward problems that predict performance from process through structure and properties. Once forward analysis methods are established, they can be combined with AI-driven optimization algorithms to solve inverse problems—designing optimal materials and processes from desired performance.</p>
-        <p>This concept of computational materials design has been proposed as "Materials Integration" and has been realized as the MInt system under the Cabinet Office SIP programs "Innovative Structural Materials" and "Materials Revolution." Based on the Materials Integration concept, we will conduct forward problem analysis through modeling and propose new materials and processes through inverse problem solving across various materials challenges.</p>
+      <div class="research-intro fade-in-up" id="research-content">
+        <p class="research-loading">Loading...</p>
       </div>
     </div>
   </main>
@@ -72,5 +70,22 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    (function () {
+      var target = document.getElementById('research-content');
+      fetch('data/research-en.md?t=' + Date.now())
+        .then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.text();
+        })
+        .then(function (md) {
+          target.innerHTML = marked.parse(md);
+        })
+        .catch(function (err) {
+          target.innerHTML = '<p class="research-loading">Failed to load content</p>';
+        });
+    })();
+  </script>
 </body>
 </html>

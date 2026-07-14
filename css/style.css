@@ -1368,6 +1368,74 @@ img {
   margin-bottom: 0;
 }
 
+.research-intro h2 {
+  color: #1a1a1a;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 1.8rem 0 1rem;
+  line-height: 1.5;
+}
+
+.research-intro h2:first-child {
+  margin-top: 0;
+}
+
+.research-intro h3 {
+  color: #1a1a1a;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin: 1.4rem 0 0.8rem;
+}
+
+.research-intro ul, .research-intro ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  color: #555;
+  font-size: 0.78rem;
+}
+
+.research-intro li {
+  margin-bottom: 0.4rem;
+}
+
+.research-intro a {
+  color: #c83c2d;
+  text-decoration: none;
+}
+
+.research-intro a:hover {
+  text-decoration: underline;
+}
+
+.research-intro strong {
+  color: #1a1a1a;
+  font-weight: 600;
+}
+
+.research-intro img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 1.5rem auto;
+  border-radius: 4px;
+}
+
+.research-intro blockquote {
+  border-left: 3px solid #c83c2d;
+  padding: 0.3rem 0 0.3rem 1rem;
+  margin: 1.2rem 0;
+  color: #666;
+  font-size: 0.78rem;
+  background: #fafafa;
+}
+
+.research-loading {
+  text-align: center;
+  color: #999;
+  font-size: 0.85rem;
+  padding: 2rem 0;
+}
+
 /* ========================================
    Contact Form
    ======================================== */

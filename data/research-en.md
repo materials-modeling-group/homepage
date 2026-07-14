@@ -1,0 +1,5 @@
+## R&D of modeling technologies connecting the four elements of materials engineering
+
+Our Materials Modeling Group conducts research on modeling technologies that connect the four elements of materials engineering. Through modeling technologies, we replace experiments with computations, accelerating the analysis of forward problems that predict performance from process through structure and properties. Once forward analysis methods are established, they can be combined with AI-driven optimization algorithms to solve inverse problems—designing optimal materials and processes from desired performance.
+
+This concept of computational materials design has been proposed as "Materials Integration" and has been realized as the MInt system under the Cabinet Office SIP programs "Innovative Structural Materials" and "Materials Revolution." Based on the Materials Integration concept, we will conduct forward problem analysis through modeling and propose new materials and processes through inverse problem solving across various materials challenges.

@@ -40,12 +40,10 @@
     <div class="container">
       <div class="page-header">
         <h1>Research</h1>
-        <p>材料工学の4要素をつなぐモデリング技術の研究開発</p>
       </div>
 
-      <div class="research-intro fade-in-up">
-        <p>私たち材料モデリンググループでは、材料工学の4要素をつなぐモデリング技術を研究します。モデリング技術によって、実験を計算に置き換え、プロセスから構造、特性を経て、性能を予測する順問題の解析を高速化していきます。そして、順方向の解析手法を確立できれば、AIによる最適化アルゴリズムと組み合わせて、ほしい性能から最適な材料・プロセスをデザインする逆問題を解くことができるようになります。</p>
-        <p>このような計算機上での材料設計は、「マテリアルズインテグレーション」というコンセプトで提案され、内閣府SIP「革新的構造材料」・「マテリアル革命」においてMIntというシステムに具現化しています。我々は、マテリアルズインテグレーションのコンセプトを基盤として、さまざまな材料課題において、モデリングによる順問題の解析、逆問題による新しい材料・プロセスの提案を行っていきます。</p>
+      <div class="research-intro fade-in-up" id="research-content">
+        <p class="research-loading">読み込み中...</p>
       </div>
     </div>
   </main>
@@ -72,5 +70,24 @@
   </footer>
 
   <script src="js/main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    // data/research.md を取得して #research-content に描画する。
+    // 取得失敗時はエラーメッセージを表示。
+    (function () {
+      var target = document.getElementById('research-content');
+      fetch('data/research.md?t=' + Date.now())
+        .then(function (r) {
+          if (!r.ok) throw new Error('HTTP ' + r.status);
+          return r.text();
+        })
+        .then(function (md) {
+          target.innerHTML = marked.parse(md);
+        })
+        .catch(function (err) {
+          target.innerHTML = '<p class="research-loading">コンテンツの読み込みに失敗しました</p>';
+        });
+    })();
+  </script>
 </body>
 </html>
