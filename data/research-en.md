@@ -7,4 +7,5 @@ Our research includes the development of digital twins for structural materials 
 
 In addition, we develop innovative technologies for data acquisition and knowledge generation that support next-generation materials research. These include acoustic emission (AE) sensing systems with real-time signal processing, hydrogen visualization techniques and grain-boundary hydrogen diffusion models, and Starrydata, a platform for extracting and structuring graph data from scientific literature.
 We view modeling not simply as a computational tool, but as a **common scientific framework for understanding, designing, and advancing both materials phenomena and the research process itself. **
+
 By seamlessly integrating physics-based models, data, AI, and sensing technologies, we seek to establish a new paradigm of modeling science for the AI era and contribute to innovations in materials research and development through the realization of Digital Twins and AI for Materials.
