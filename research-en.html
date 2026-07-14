@@ -42,7 +42,7 @@
         <h1>Research</h1>
       </div>
 
-      <div class="research-intro fade-in-up" id="research-content">
+      <div class="research-intro fade-in-up" id="research-content" data-source="data/research-en.md" data-error="Failed to load content">
         <p class="research-loading">Loading...</p>
       </div>
     </div>
@@ -70,22 +70,7 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
-    (function () {
-      var target = document.getElementById('research-content');
-      fetch('data/research-en.md?t=' + Date.now())
-        .then(function (r) {
-          if (!r.ok) throw new Error('HTTP ' + r.status);
-          return r.text();
-        })
-        .then(function (md) {
-          target.innerHTML = marked.parse(md);
-        })
-        .catch(function (err) {
-          target.innerHTML = '<p class="research-loading">Failed to load content</p>';
-        });
-    })();
-  </script>
+  <script src="js/marked.min.js"></script>
+  <script src="js/research.js"></script>
 </body>
 </html>

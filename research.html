@@ -42,7 +42,7 @@
         <h1>Research</h1>
       </div>
 
-      <div class="research-intro fade-in-up" id="research-content">
+      <div class="research-intro fade-in-up" id="research-content" data-source="data/research.md" data-error="コンテンツの読み込みに失敗しました">
         <p class="research-loading">読み込み中...</p>
       </div>
     </div>
@@ -70,24 +70,7 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-  <script>
-    // data/research.md を取得して #research-content に描画する。
-    // 取得失敗時はエラーメッセージを表示。
-    (function () {
-      var target = document.getElementById('research-content');
-      fetch('data/research.md?t=' + Date.now())
-        .then(function (r) {
-          if (!r.ok) throw new Error('HTTP ' + r.status);
-          return r.text();
-        })
-        .then(function (md) {
-          target.innerHTML = marked.parse(md);
-        })
-        .catch(function (err) {
-          target.innerHTML = '<p class="research-loading">コンテンツの読み込みに失敗しました</p>';
-        });
-    })();
-  </script>
+  <script src="js/marked.min.js"></script>
+  <script src="js/research.js"></script>
 </body>
 </html>
