@@ -16,6 +16,17 @@
     ]
   },
   {
+    "date": "2026-07-01",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "出村雅彦グループリーダーの論文がScripta Materialiaに掲載されました",
+    "title_en": "",
+    "paper_title": "Quantitative evaluation of lattice defect density in pure iron utilizing tracer hydrogen charging: case of dislocations",
+    "doi": "10.1016/j.scriptamat.2026.117490",
+    "body": "著者：Kei Saito, Keisuke Akiyama, Masahiko Demura, Kenichi Takai<br>ジャーナル：Scripta Materialia<br>論文番号：117490<br>オンライン公開：2026年7月<br>DOI：10.1016/j.scriptamat.2026.117490",
+    "body_en": ""
+  },
+  {
     "date": "2026-06-23",
     "category": "お知らせ",
     "category_en": "Announcement",
@@ -303,6 +314,17 @@
     "paper_title": "In situ 2D visualization of hydrogen entry into Zn-coated steels in NaCl solutions: Roles of Zn dissolution and potential distribution",
     "doi": "10.1016/j.corsci.2025.113386",
     "body": "著者：Hiroshi Kakinuma, Saya Ajito, Koki Okumura, Makoto Akahoshi, Yu Takabatake, Tomohiko Omura, Motomichi Koyama, Eiji Akiyama<br>ジャーナル：Corrosion Science<br>巻号：Vol. 258<br>論文番号：113386<br>オンライン公開：2026年1月<br>DOI：10.1016/j.corsci.2025.113386<br>備考：Open Access",
+    "body_en": ""
+  },
+  {
+    "date": "2026-01-01",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "出村雅彦グループリーダーの論文がに掲載されました",
+    "title_en": "",
+    "paper_title": "Crystal Plasticity Analysis of Slip-System Interaction Constraints in Anisotropic Cold Rolling of Ni₃Al Single Crystals",
+    "doi": "10.2139/ssrn.7132780",
+    "body": "著者：Jiyi Yang, Yoshinao Kobayashi, Masahiko Demura<br>オンライン公開：2026年<br>DOI：10.2139/ssrn.7132780",
     "body_en": ""
   },
   {
