@@ -58,11 +58,14 @@ homepage/
 
 | ソース | 内容 | 頻度 |
 |-------|------|------|
-| [CrossRef API](https://api.crossref.org/) | 論文（ORCID経由） | 毎週月曜 09:00 JST |
-| [NIMS SAMURAI](https://samurai.nims.go.jp/) | 招待講演 | 毎週月曜 10:00 JST |
-| [KAKEN](https://kaken.nii.ac.jp/) | 科研費採択 | 毎週月曜 11:00 JST |
+| [CrossRef API](https://api.crossref.org/) | 論文（ORCID経由）→ News に追加 | 毎週月曜 09:00 JST |
+| [NIMS SAMURAI](https://samurai.nims.go.jp/) | 招待講演 → News に追加 | 毎週月曜 10:00 JST |
+| [KAKEN](https://kaken.nii.ac.jp/) | 科研費採択 → News に追加 | 毎週月曜 11:00 JST |
+| [NIMS SAMURAI](https://samurai.nims.go.jp/groups/50c1zz0l44) | グループ業績 → `data/publications.json` | 毎週月曜 00:00 JST |
 
 自動投稿されたエントリもAdmin画面から加筆修正・削除可能です。
+
+Publications ページの詳細は [`docs/publications-sync.md`](docs/publications-sync.md) を参照。
 
 ## 関連リポジトリ
 
