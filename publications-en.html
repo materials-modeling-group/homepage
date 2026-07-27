@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research - Materials Modeling Group</title>
+  <title>Publications - Materials Modeling Group</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="navbar">
     <div class="navbar-inner">
-      <a href="index.html" class="navbar-brand">
+      <a href="index-en.html" class="navbar-brand">
         <div class="navbar-logos">
           <img src="images/logo_nims_20190425mark.png" alt="NIMS" class="logo-link" onclick="event.preventDefault();event.stopPropagation();window.open(&#39;https://www.nims.go.jp/&#39;,&#39;_blank&#39;)" style="cursor:pointer">
           <img src="images/cbrm_logo_tate.png" alt="CBRM" class="logo-link" onclick="event.preventDefault();event.stopPropagation();window.open(&#39;https://www.nims.go.jp/cbrm/&#39;,&#39;_blank&#39;)" style="cursor:pointer">
@@ -17,16 +17,16 @@
         <span class="navbar-brand-text"><span>M</span>aterials <span>M</span>odeling <span>G</span><span class="group-full">roup</span><span class="group-short">r.</span></span>
       </a>
       <nav class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="research.html" class="active">Research</a>
-        <a href="publications.html">Publications</a>
-        <a href="news.html">News</a>
-        <a href="members.html">Members</a>
-        <a href="contact.html">Contact</a>
+        <a href="index-en.html">Home</a>
+        <a href="research-en.html">Research</a>
+        <a href="publications-en.html" class="active">Publications</a>
+        <a href="news-en.html">News</a>
+        <a href="members-en.html">Members</a>
+        <a href="contact-en.html">Contact</a>
         <div class="lang-switcher">
-          <span class="lang-active">日本語</span>
+          <a href="publications.html">日本語</a>
           <span class="lang-separator">/</span>
-          <a href="research-en.html">English</a>
+          <span class="lang-active">English</span>
         </div>
       </nav>
       <button class="hamburger" aria-label="Menu">
@@ -40,38 +40,43 @@
   <main>
     <div class="container">
       <div class="page-header">
-        <h1>Research</h1>
+        <h1>Publications</h1>
+        <p class="page-subtitle">Publications of group members (auto-synced from <a href="https://samurai.nims.go.jp/groups/50c1zz0l44?locale=en" target="_blank" rel="noopener">SAMURAI</a>)</p>
       </div>
 
-      <div class="research-intro fade-in-up" id="research-content">
-        <p class="research-loading">読み込み中...</p>
-      </div>
+      <div class="pub-section-tabs" id="pub-section-tabs"></div>
+      <div class="pub-year-tabs" id="pub-year-tabs"></div>
+      <div class="pub-list" id="pub-list"></div>
+      <p class="pub-updated" id="pub-updated"></p>
     </div>
   </main>
+
+  <div class="footer-wave">
+    <svg viewBox="0 0 1440 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C360,220 720,0 1080,190 C1260,220 1380,40 1440,90 L1440,220 L0,220 Z"/>
+    </svg>
+  </div>
 
   <footer class="footer">
     <div class="footer-inner">
       <div class="footer-content">
         <div class="footer-access">
           <p class="footer-access-title">Access</p>
-          <p>国立研究開発法人物質・材料研究機構</p>
-          <p>マテリアル基盤研究センター</p>
-          <p>材料モデリンググループ</p>
-          <p>〒305-0044 茨城県つくば市並木1-1</p>
+          <p>National Institute for Materials Science (NIMS)</p>
+          <p>Center for Basic Research on Materials</p>
+          <p>Materials Modeling Group</p>
+          <p>1-1 Namiki, Tsukuba, Ibaraki 305-0044, Japan</p>
         </div>
         <div class="footer-logos">
           <a href="https://www.nims.go.jp/" target="_blank" rel="noopener"><img src="images/logo_nims_20190425mark.png" alt="NIMS"></a>
           <a href="https://www.nims.go.jp/cbrm/" target="_blank" rel="noopener"><img src="images/cbrm_logo_tate.png" alt="CBRM"></a>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
       <p class="footer-copy">&copy; 2026 Materials Modeling Group. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="js/marked.min.js"></script>
-  <script src="js/research.js"></script>
+  <script src="js/publications.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>

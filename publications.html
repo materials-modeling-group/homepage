@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Research - Materials Modeling Group</title>
+  <title>Publications - Materials Modeling Group</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -18,15 +18,15 @@
       </a>
       <nav class="nav-links">
         <a href="index.html">Home</a>
-        <a href="research.html" class="active">Research</a>
-        <a href="publications.html">Publications</a>
+        <a href="research.html">Research</a>
+        <a href="publications.html" class="active">Publications</a>
         <a href="news.html">News</a>
         <a href="members.html">Members</a>
         <a href="contact.html">Contact</a>
         <div class="lang-switcher">
           <span class="lang-active">日本語</span>
           <span class="lang-separator">/</span>
-          <a href="research-en.html">English</a>
+          <a href="publications-en.html">English</a>
         </div>
       </nav>
       <button class="hamburger" aria-label="Menu">
@@ -40,14 +40,22 @@
   <main>
     <div class="container">
       <div class="page-header">
-        <h1>Research</h1>
+        <h1>Publications</h1>
+        <p class="page-subtitle">グループメンバーの業績 (<a href="https://samurai.nims.go.jp/groups/50c1zz0l44" target="_blank" rel="noopener">SAMURAI</a> より自動同期)</p>
       </div>
 
-      <div class="research-intro fade-in-up" id="research-content">
-        <p class="research-loading">読み込み中...</p>
-      </div>
+      <div class="pub-section-tabs" id="pub-section-tabs"></div>
+      <div class="pub-year-tabs" id="pub-year-tabs"></div>
+      <div class="pub-list" id="pub-list"></div>
+      <p class="pub-updated" id="pub-updated"></p>
     </div>
   </main>
+
+  <div class="footer-wave">
+    <svg viewBox="0 0 1440 220" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0,40 C360,220 720,0 1080,190 C1260,220 1380,40 1440,90 L1440,220 L0,220 Z"/>
+    </svg>
+  </div>
 
   <footer class="footer">
     <div class="footer-inner">
@@ -64,14 +72,11 @@
           <a href="https://www.nims.go.jp/cbrm/" target="_blank" rel="noopener"><img src="images/cbrm_logo_tate.png" alt="CBRM"></a>
         </div>
       </div>
-    </div>
-    <div class="footer-bottom">
       <p class="footer-copy">&copy; 2026 Materials Modeling Group. All rights reserved.</p>
     </div>
   </footer>
 
-  <script src="js/marked.min.js"></script>
-  <script src="js/research.js"></script>
+  <script src="js/publications.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
