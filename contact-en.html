@@ -44,76 +44,80 @@
         <p>If you have any questions, please feel free to contact us using the form below.</p>
       </div>
 
-      <div class="contact-layout fade-in-up">
-        <section class="contact-form-section">
-          <div class="form-card" id="form-container">
-            <form id="contact-form" onsubmit="return handleSubmit(event)" novalidate>
-              <div class="form-group">
-                <label for="subject">Subject <span class="req">*</span></label>
-                <input type="text" id="subject" name="subject" autocomplete="off" required>
-                <p class="error-message hidden" id="subject-error">Please enter a subject</p>
-              </div>
-
-              <div class="form-row">
-                <div class="form-group">
-                  <label for="name">Name <span class="req">*</span></label>
-                  <input type="text" id="name" name="name" autocomplete="name" required>
-                  <p class="error-message hidden" id="name-error">Please enter your name</p>
-                </div>
-
-                <div class="form-group">
-                  <label for="contact">Contact <span class="req">*</span></label>
-                  <input type="text" id="contact" name="contact" autocomplete="email" required>
-                  <p class="form-hint">Email address or phone number</p>
-                  <p class="error-message hidden" id="contact-error">Please enter your contact information</p>
-                </div>
-              </div>
-
-              <div class="form-group">
-                <label for="message">Message <span class="req">*</span></label>
-                <textarea id="message" name="message" rows="7" required></textarea>
-                <p class="error-message hidden" id="message-error">Please enter a message with at least 10 characters</p>
-              </div>
-
-              <button type="submit" class="btn-primary">Send</button>
-              <p class="form-note">Clicking send will open your email client with the message pre-filled.</p>
-            </form>
-          </div>
-
-          <div class="form-card success-message hidden" id="success-container">
-            <div class="success-icon" aria-hidden="true">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="20 6 9 17 4 12"></polyline>
-              </svg>
+      <section class="contact-form-section fade-in-up">
+        <div class="form-card" id="form-container">
+          <form id="contact-form" onsubmit="return handleSubmit(event)" novalidate>
+            <div class="form-group">
+              <label for="name">Name <span class="req">*</span></label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+              <p class="error-message hidden" id="name-error">Please enter your name</p>
             </div>
-            <h2>Thank you for your inquiry</h2>
-            <p>Your email client should have opened.<br>Please review the message and send it.</p>
-            <button class="btn-primary" onclick="resetForm()">New Inquiry</button>
-          </div>
-        </section>
 
-        <aside class="contact-info-section">
-          <div class="info-card">
-            <h3 class="info-card-title">Access</h3>
-            <p class="info-card-org">National Institute for Materials Science (NIMS)</p>
-            <p class="info-card-line">Center for Basic Research on Materials</p>
-            <p class="info-card-line">Materials Modeling Group</p>
-            <p class="info-card-addr">1-1 Namiki, Tsukuba<br>Ibaraki 305-0044, Japan</p>
-            <p class="info-card-map">
-              <a href="https://www.google.com/maps/search/?api=1&query=National+Institute+for+Materials+Science+Namiki" target="_blank" rel="noopener">View on Google Maps →</a>
-            </p>
-          </div>
+            <div class="form-group">
+              <label for="email">Email <span class="req">*</span></label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+              <p class="error-message hidden" id="email-error">Please enter a valid email address</p>
+            </div>
 
-          <div class="info-card">
-            <h3 class="info-card-title">Related Links</h3>
-            <ul class="info-links">
-              <li><a href="https://www.nims.go.jp/eng/" target="_blank" rel="noopener">NIMS (National Institute for Materials Science)</a></li>
-              <li><a href="https://www.nims.go.jp/cbrm/" target="_blank" rel="noopener">CBRM (Center for Basic Research on Materials)</a></li>
-              <li><a href="https://samurai.nims.go.jp/groups/50c1zz0l44?locale=en" target="_blank" rel="noopener">SAMURAI Researcher Directory</a></li>
+            <div class="form-group">
+              <label for="subject">Subject <span class="req">*</span></label>
+              <input type="text" id="subject" name="subject" autocomplete="off" required>
+              <p class="error-message hidden" id="subject-error">Please enter a subject</p>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message <span class="req">*</span></label>
+              <textarea id="message" name="message" rows="7" required></textarea>
+              <p class="error-message hidden" id="message-error">Please enter a message with at least 10 characters</p>
+            </div>
+
+            <button type="submit" class="btn-primary">Send</button>
+            <p class="form-note">Clicking send will open your email client with the message pre-filled.</p>
+          </form>
+        </div>
+
+        <div class="form-card success-message hidden" id="success-container">
+          <div class="success-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+          </div>
+          <h2>Thank you for your inquiry</h2>
+          <p>Your email client should have opened.<br>Please review the message and send it.</p>
+          <button class="btn-primary" onclick="resetForm()">New Inquiry</button>
+        </div>
+      </section>
+
+      <section class="access-section fade-in-up">
+        <h2 class="access-title">Access</h2>
+        <p class="access-address">
+          National Institute for Materials Science (NIMS)<br>
+          Center for Basic Research on Materials, Materials Modeling Group<br>
+          1-1 Namiki, Tsukuba, Ibaraki 305-0044, Japan
+        </p>
+        <div class="access-map">
+          <iframe
+            src="https://maps.google.com/maps?q=National+Institute+for+Materials+Science+Namiki&output=embed"
+            width="100%" height="400" style="border:0;" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        </div>
+        <div class="access-info">
+          <div class="access-group">
+            <h3 class="access-heading">By Train</h3>
+            <ul class="access-list">
+              <li>Tsukuba Express "Tsukuba Station", then about 10 min by bus</li>
+              <li>JR Joban Line "Arakawaoki Station", then about 30 min by bus</li>
             </ul>
           </div>
-        </aside>
-      </div>
+          <div class="access-group">
+            <h3 class="access-heading">By Car</h3>
+            <ul class="access-list">
+              <li>About 15 min from Joban Expressway "Sakura-Tsuchiura IC"</li>
+              <li>About 10 min from Ken-O Expressway "Tsukuba Chuo IC"</li>
+            </ul>
+          </div>
+        </div>
+      </section>
     </div>
   </main>
 

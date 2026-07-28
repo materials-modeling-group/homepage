@@ -1,4 +1,4 @@
-// Contact フォーム: 件名 / 名前 / ご連絡先 / 内容 を mailto: 経由で出村さん宛に送る
+// Contact フォーム: 名前 / メールアドレス / 件名 / 内容 を mailto: 経由で出村さん宛に送る
 // 宛先アドレスは HTML には書かず JS で組み立てて bot によるスクレイピングを回避する。
 (function () {
   'use strict';
@@ -8,10 +8,13 @@
 
   var LANG = document.documentElement.lang === 'en' ? 'en' : 'ja';
   var LABEL = LANG === 'en'
-    ? { subject: 'Subject', name: 'Name', contact: 'Contact', message: 'Message' }
-    : { subject: '件名', name: 'お名前', contact: 'ご連絡先', message: 'お問い合わせ内容' };
+    ? { name: 'Name', email: 'Email', subject: 'Subject', message: 'Message' }
+    : { name: 'お名前', email: 'メールアドレス', subject: '件名', message: 'お問い合わせ内容' };
 
-  var FIELDS = ['subject', 'name', 'contact', 'message'];
+  var FIELDS = ['name', 'email', 'subject', 'message'];
+
+  // 一般的なメールアドレス形式チェック（過度に厳密にしない）
+  var EMAIL_RE = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   function $(id) { return document.getElementById(id); }
 
@@ -36,12 +39,17 @@
       values[id] = ($(id).value || '').trim();
     });
 
-    // subject / name / contact: 必須（空文字NG）
-    ['subject', 'name', 'contact'].forEach(function (id) {
+    // name / subject: 必須（空文字NG）
+    ['name', 'subject'].forEach(function (id) {
       var ok = values[id].length > 0;
       showError(id, !ok);
       if (!ok) valid = false;
     });
+
+    // email: 形式チェック
+    var emailOk = EMAIL_RE.test(values.email);
+    showError('email', !emailOk);
+    if (!emailOk) valid = false;
 
     // message: 10文字以上
     var msgOk = values.message.length >= 10;
@@ -59,7 +67,7 @@
     var recipient = RECIPIENT_USER + '@' + RECIPIENT_DOMAIN;
     var body =
       LABEL.name + ': ' + v.name + '\n' +
-      LABEL.contact + ': ' + v.contact + '\n\n' +
+      LABEL.email + ': ' + v.email + '\n\n' +
       v.message;
 
     var mailto = 'mailto:' + recipient +
