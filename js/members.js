@@ -151,6 +151,14 @@ function renderMembers(data, lang) {
 
   if (currentSectionOpen) html.push('</div>');
   root.innerHTML = html.join('');
+
+  // main.js の IntersectionObserver は DOMContentLoaded 時に .fade-in-up を捕捉済み。
+  // 動的生成した要素は observer の対象外なので、ここで手動で visible を付与する（news.js と同じ方式）。
+  requestAnimationFrame(function () {
+    root.querySelectorAll('.fade-in-up').forEach(function (el) {
+      el.classList.add('visible');
+    });
+  });
 }
 
 function renderIntro(data, lang) {
