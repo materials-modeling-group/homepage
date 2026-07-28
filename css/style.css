@@ -1737,7 +1737,7 @@ img {
   margin: 3.5rem auto 0;
 }
 
-.access-title {
+.contact-section-title {
   color: #1a1a1a;
   font-size: 1.15rem;
   font-weight: 600;
@@ -1748,7 +1748,7 @@ img {
   letter-spacing: 0.03em;
 }
 
-.access-title::before {
+.contact-section-title::before {
   content: '';
   position: absolute;
   bottom: -1px;
