@@ -41,45 +41,78 @@
     <div class="container">
       <div class="page-header">
         <h1>Contact</h1>
-        <p>ご質問・ご相談がございましたら、下記フォームよりお気軽にお問い合わせください。</p>
+        <p>ご質問・ご相談は下記フォームよりお気軽にお問い合わせください。</p>
       </div>
 
-      <div class="contact-form fade-in-up">
-        <div class="form-card" id="form-container">
-          <form id="contact-form" onsubmit="return handleSubmit(event)">
-            <div class="form-group">
-              <label for="name">お名前 *</label>
-              <input type="text" id="name" name="name" required>
-              <p class="error-message hidden" id="name-error">お名前を入力してください</p>
+      <div class="contact-layout fade-in-up">
+        <section class="contact-form-section">
+          <div class="form-card" id="form-container">
+            <form id="contact-form" onsubmit="return handleSubmit(event)" novalidate>
+              <div class="form-group">
+                <label for="subject">件名 <span class="req">*</span></label>
+                <input type="text" id="subject" name="subject" autocomplete="off" required>
+                <p class="error-message hidden" id="subject-error">件名を入力してください</p>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name">お名前 <span class="req">*</span></label>
+                  <input type="text" id="name" name="name" autocomplete="name" required>
+                  <p class="error-message hidden" id="name-error">お名前を入力してください</p>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact">ご連絡先 <span class="req">*</span></label>
+                  <input type="text" id="contact" name="contact" autocomplete="email" required>
+                  <p class="form-hint">メールアドレス または お電話番号</p>
+                  <p class="error-message hidden" id="contact-error">ご連絡先を入力してください</p>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message">お問い合わせ内容 <span class="req">*</span></label>
+                <textarea id="message" name="message" rows="7" required></textarea>
+                <p class="error-message hidden" id="message-error">お問い合わせ内容を10文字以上で入力してください</p>
+              </div>
+
+              <button type="submit" class="btn-primary">送信する</button>
+              <p class="form-note">送信ボタンを押すと、お使いのメールソフトが起動して内容が送信されます。</p>
+            </form>
+          </div>
+
+          <div class="form-card success-message hidden" id="success-container">
+            <div class="success-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="20 6 9 17 4 12"></polyline>
+              </svg>
             </div>
+            <h2>お問い合わせありがとうございます</h2>
+            <p>メールソフトを起動しました。<br>内容をご確認のうえ送信してください。</p>
+            <button class="btn-primary" onclick="resetForm()">新しいお問い合わせ</button>
+          </div>
+        </section>
 
-            <div class="form-group">
-              <label for="email">メールアドレス *</label>
-              <input type="email" id="email" name="email" required>
-              <p class="error-message hidden" id="email-error">有効なメールアドレスを入力してください</p>
-            </div>
+        <aside class="contact-info-section">
+          <div class="info-card">
+            <h3 class="info-card-title">Access</h3>
+            <p class="info-card-org">国立研究開発法人 物質・材料研究機構</p>
+            <p class="info-card-line">マテリアル基盤研究センター</p>
+            <p class="info-card-line">材料モデリンググループ</p>
+            <p class="info-card-addr">〒305-0044<br>茨城県つくば市並木 1-1</p>
+            <p class="info-card-map">
+              <a href="https://www.google.com/maps/search/?api=1&query=%E7%89%A9%E8%B3%AA%E6%9D%90%E6%96%99%E7%A0%94%E7%A9%B6%E6%A9%9F%E6%A7%8B+%E4%B8%A6%E6%9C%A8%E5%9C%B0%E5%8C%BA" target="_blank" rel="noopener">Google Mapsで見る →</a>
+            </p>
+          </div>
 
-            <div class="form-group">
-              <label for="subject">件名 *</label>
-              <input type="text" id="subject" name="subject" required>
-              <p class="error-message hidden" id="subject-error">件名を入力してください</p>
-            </div>
-
-            <div class="form-group">
-              <label for="message">お問い合わせ内容 *</label>
-              <textarea id="message" name="message" rows="6" required></textarea>
-              <p class="error-message hidden" id="message-error">お問い合わせ内容を10文字以上で入力してください</p>
-            </div>
-
-            <button type="submit" class="btn-primary">送信する</button>
-          </form>
-        </div>
-
-        <div class="form-card success-message hidden" id="success-container">
-          <h2>お問い合わせありがとうございます</h2>
-          <p>内容を確認の上、担当者よりご連絡いたします。</p>
-          <button class="btn-primary" onclick="resetForm()">新しいお問い合わせ</button>
-        </div>
+          <div class="info-card">
+            <h3 class="info-card-title">関連リンク</h3>
+            <ul class="info-links">
+              <li><a href="https://www.nims.go.jp/" target="_blank" rel="noopener">NIMS 物質・材料研究機構</a></li>
+              <li><a href="https://www.nims.go.jp/cbrm/" target="_blank" rel="noopener">CBRM マテリアル基盤研究センター</a></li>
+              <li><a href="https://samurai.nims.go.jp/groups/50c1zz0l44" target="_blank" rel="noopener">SAMURAI 研究者総覧</a></li>
+            </ul>
+          </div>
+        </aside>
       </div>
     </div>
   </main>

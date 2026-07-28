@@ -1,78 +1,81 @@
-function validateEmail(email) {
-  const re = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
-  return re.test(email);
-}
+// Contact フォーム: 件名 / 名前 / ご連絡先 / 内容 を mailto: 経由で出村さん宛に送る
+// 宛先アドレスは HTML には書かず JS で組み立てて bot によるスクレイピングを回避する。
+(function () {
+  'use strict';
 
-function showError(fieldId, show) {
-  const field = document.getElementById(fieldId);
-  const error = document.getElementById(fieldId + '-error');
+  var RECIPIENT_USER = 'DEMURA.Masahiko';
+  var RECIPIENT_DOMAIN = 'nims.go.jp';
 
-  if (show) {
-    field.classList.add('error');
-    error.classList.remove('hidden');
-  } else {
-    field.classList.remove('error');
-    error.classList.add('hidden');
-  }
-}
+  var LANG = document.documentElement.lang === 'en' ? 'en' : 'ja';
+  var LABEL = LANG === 'en'
+    ? { subject: 'Subject', name: 'Name', contact: 'Contact', message: 'Message' }
+    : { subject: '件名', name: 'お名前', contact: 'ご連絡先', message: 'お問い合わせ内容' };
 
-function handleSubmit(event) {
-  event.preventDefault();
+  var FIELDS = ['subject', 'name', 'contact', 'message'];
 
-  const name = document.getElementById('name').value.trim();
-  const email = document.getElementById('email').value.trim();
-  const subject = document.getElementById('subject').value.trim();
-  const message = document.getElementById('message').value.trim();
+  function $(id) { return document.getElementById(id); }
 
-  let isValid = true;
-
-  if (!name) {
-    showError('name', true);
-    isValid = false;
-  } else {
-    showError('name', false);
+  function showError(id, show) {
+    var input = $(id);
+    var err = $(id + '-error');
+    if (!input || !err) return;
+    if (show) {
+      input.classList.add('error');
+      err.classList.remove('hidden');
+    } else {
+      input.classList.remove('error');
+      err.classList.add('hidden');
+    }
   }
 
-  if (!email || !validateEmail(email)) {
-    showError('email', true);
-    isValid = false;
-  } else {
-    showError('email', false);
+  function validate() {
+    var values = {};
+    var valid = true;
+
+    FIELDS.forEach(function (id) {
+      values[id] = ($(id).value || '').trim();
+    });
+
+    // subject / name / contact: 必須（空文字NG）
+    ['subject', 'name', 'contact'].forEach(function (id) {
+      var ok = values[id].length > 0;
+      showError(id, !ok);
+      if (!ok) valid = false;
+    });
+
+    // message: 10文字以上
+    var msgOk = values.message.length >= 10;
+    showError('message', !msgOk);
+    if (!msgOk) valid = false;
+
+    return valid ? values : null;
   }
 
-  if (!subject) {
-    showError('subject', true);
-    isValid = false;
-  } else {
-    showError('subject', false);
-  }
+  window.handleSubmit = function (event) {
+    event.preventDefault();
+    var v = validate();
+    if (!v) return false;
 
-  if (!message || message.length < 10) {
-    showError('message', true);
-    isValid = false;
-  } else {
-    showError('message', false);
-  }
+    var recipient = RECIPIENT_USER + '@' + RECIPIENT_DOMAIN;
+    var body =
+      LABEL.name + ': ' + v.name + '\n' +
+      LABEL.contact + ': ' + v.contact + '\n\n' +
+      v.message;
 
-  if (isValid) {
-    const recipient = 'DEMURA.Masahiko@nims.go.jp';
-    const body = `お名前: ${name}\nメールアドレス: ${email}\n\n${message}`;
-    const mailto = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    var mailto = 'mailto:' + recipient +
+      '?subject=' + encodeURIComponent(v.subject) +
+      '&body=' + encodeURIComponent(body);
     window.location.href = mailto;
 
-    document.getElementById('form-container').classList.add('hidden');
-    document.getElementById('success-container').classList.remove('hidden');
-  }
+    $('form-container').classList.add('hidden');
+    $('success-container').classList.remove('hidden');
+    return false;
+  };
 
-  return false;
-}
-
-function resetForm() {
-  document.getElementById('contact-form').reset();
-  document.getElementById('form-container').classList.remove('hidden');
-  document.getElementById('success-container').classList.add('hidden');
-
-  ['name', 'email', 'subject', 'message'].forEach(field => {
-    showError(field, false);
-  });
-}
+  window.resetForm = function () {
+    $('contact-form').reset();
+    $('form-container').classList.remove('hidden');
+    $('success-container').classList.add('hidden');
+    FIELDS.forEach(function (id) { showError(id, false); });
+  };
+})();
