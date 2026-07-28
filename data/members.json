@@ -1,0 +1,328 @@
+{
+  "intro_ja": "私たちのチームを紹介します。多様なバックグラウンドを持つメンバーが、それぞれの強みを活かして活躍しています。",
+  "intro_en": "Meet our team. Members with diverse backgrounds contribute their individual strengths.",
+  "sections": [
+    { "id": "researcher", "level": "section", "grid": "researcher", "title_ja": "Researcher", "title_en": "Researcher" },
+    { "id": "postdoc", "level": "subsection", "grid": "3col", "title_ja": "Postdoctoral Research Fellow", "title_en": "Postdoctoral Research Fellow" },
+    { "id": "student", "level": "section", "grid": "none", "title_ja": "Student", "title_en": "Student" },
+    { "id": "grad", "level": "subsection", "grid": "3col", "title_ja": "Graduate Research Assistant", "title_en": "Graduate Research Assistant" },
+    { "id": "trainee", "level": "subsection", "grid": "3col", "title_ja": "Trainee", "title_en": "Trainee" },
+    { "id": "visiting", "level": "section", "grid": "3col", "title_ja": "Visiting Researchers", "title_en": "Visiting Researchers" },
+    { "id": "technical_staff", "level": "section", "grid": "3col", "title_ja": "Project Technical Staff", "title_en": "Project Technical Staff" },
+    { "id": "office_staff", "level": "section", "grid": "3col", "title_ja": "Office Staff", "title_en": "Office Staff" },
+    { "id": "alumni", "level": "section", "grid": "alumni", "title_ja": "Alumni", "title_en": "Alumni" }
+  ],
+  "members": [
+    {
+      "section": "researcher",
+      "photo": "images/members/出村雅彦.jpg",
+      "name_ja": "出村 雅彦, Masahiko Demura",
+      "name_en": "Masahiko Demura",
+      "email": "DEMURA.Masahiko@nims.go.jp",
+      "title_ja": "グループリーダー",
+      "title_en": "Group Leader",
+      "additional_roles_ja": "技術開発・共用部門 部門長<br>外部連携部門 構造材料DXマテリアルズオープンプラットフォーム プラットフォーム長<br>技術開発・共用部門 情報基盤プラットフォーム プラットフォーム長<br>理事長補佐<br>東京科学大学 物質・情報卓越教育院/物質理工学院 特定教授",
+      "additional_roles_en": "Advanced Engineering and Services Division Director<br>Materials Open Platform for Structural Materials-DX External Collaboration Division Platform Director<br>ICT Infrastructure Platform Advanced Engineering and Services Division Platform Director<br>Assistant to the President<br>東京科学大学 物質・情報卓越教育院/物質理工学院 特定教授",
+      "research_title_ja": "マテリアルズインテグレーションによる材料研究DX",
+      "research_title_en": "Materials research DX through Materials Integration",
+      "keywords_ja": "計算材料工学、データ駆動、逆問題、産学連携プラットフォーム",
+      "keywords_en": "Computational materials engineering, data-driven, inverse problems, industry-academia collaboration platform",
+      "samurai_id": "demura_masahiko"
+    },
+    {
+      "section": "researcher",
+      "photo": "images/members/戸田佳明.jpg",
+      "name_ja": "戸田 佳明, Yoshiaki Toda",
+      "name_en": "Yoshiaki Toda",
+      "email": "TODA.Yoshiaki@nims.go.jp",
+      "title_ja": "主幹研究員",
+      "title_en": "Principal Researcher",
+      "additional_roles_ja": "外部連携部門 構造材料DXマテリアルズオープンプラットフォーム<br>横浜国立大学 大学院 工学研究院　客員准教授",
+      "additional_roles_en": "Materials Open Platform for Structural Materials-DX External Collaboration Division<br>横浜国立大学 大学院理工学府 客員准教授",
+      "research_title_ja": "超臨界地熱発電用耐熱材料の評価と開発",
+      "research_title_en": "Evaluation and development of heat-resistant materials for supercritical geothermal power generation",
+      "keywords_ja": "再生可能エネルギー、地熱発電、ケーシング材、耐熱鋼、腐食、酸化、高温高圧、超臨界水、水蒸気、酸性",
+      "keywords_en": "Renewable energy, geothermal power, casing materials, heat-resistant steel, corrosion, oxidation, high temperature/pressure, supercritical water, steam, acidity",
+      "samurai_id": "toda_yoshiaki"
+    },
+    {
+      "section": "researcher",
+      "photo": "images/members/渡邊育夢.jpg",
+      "name_ja": "渡邊 育夢, Ikumu Watanabe",
+      "name_en": "Ikumu Watanabe",
+      "email": "WATANABE.Ikumu@nims.go.jp",
+      "title_ja": "主幹研究員",
+      "title_en": "Principal Researcher",
+      "additional_roles_ja": "筑波大学 数理物質科学研究群 NIMS連係物質・材料工学サブプログラム 准教授 (NIMS連携大学院)<br>筑波大学 数理物質科学研究群 物性・分子工学サブプログラム 准教授 (NIMS連携大学院)",
+      "additional_roles_en": "Associate professor, Subprogram in Materials Science and Engineering, Graduate School of Science and Technology, University of Tsukuba (NIMS Joint Graduate School)<br>Associate professor, Subprogram in Materials Science, Graduate School of Science and Technology, University of Tsukuba (NIMS Joint Graduate School)",
+      "research_title_ja": "計算機を活用した材料研究・開発",
+      "research_title_en": "Computer-aided materials research and development",
+      "keywords_ja": "計算機支援工学、マルチスケールモデリング、有限要素法、数理最適化",
+      "keywords_en": "Computer-aided engineering, multiscale modeling, finite element method, mathematical optimization",
+      "samurai_id": "watanabe_ikumu"
+    },
+    {
+      "section": "researcher",
+      "photo": "images/members/伊藤海太.jpg",
+      "name_ja": "伊藤 海太, Kaita Ito",
+      "name_en": "Kaita Ito",
+      "email": "ITO.Kaita@nims.go.jp",
+      "title_ja": "主任研究員",
+      "title_en": "Senior Researcher",
+      "additional_roles_ja": "外部連携部門 構造材料DXマテリアルズオープンプラットフォーム",
+      "additional_roles_en": "Materials Open Platform for Structural Materials-DX External Collaboration Division",
+      "research_title_ja": "AE法による材料製造加工のインプロセスモニタリング",
+      "research_title_en": "In-process monitoring of materials manufacturing by AE method",
+      "keywords_ja": "アコースティック・エミッション法、Acoustic Emission、非破壊評価、非破壊検査、インプロセスモニタリング、IoT",
+      "keywords_en": "Acoustic emission method, non-destructive evaluation, non-destructive inspection, in-process monitoring, IoT",
+      "samurai_id": "ito_kaita"
+    },
+    {
+      "section": "researcher",
+      "photo": "images/members/桂ゆかり.jpg",
+      "name_ja": "桂 ゆかり, Yukari Katsura",
+      "name_en": "Yukari Katsura",
+      "email": "KATSURA.Yukari@nims.go.jp",
+      "title_ja": "主任研究員",
+      "title_en": "Senior Researcher",
+      "additional_roles_ja": "筑波大学 数理物質科学研究群 国際マテリアルズイノベーション学位プログラム 准教授 (NIMS連携大学院)<br>特定国立研究開発法人理化学研究所 革新知能統合研究センター（理研AIP） 客員研究員",
+      "additional_roles_en": "Associate professor, Degree Program in Materials Innovation, Graduate School of Science and Technology, University of Tsukuba (NIMS Joint Graduate School)<br>RIKEN Molecular Informatics Team, RIKEN Center for Advanced Intelligence Project Guest Researcher",
+      "research_title_ja": "大規模データベースStarrydataで材料科学の世界を俯瞰",
+      "research_title_en": "Surveying materials science with the large-scale database Starrydata",
+      "keywords_ja": "マテリアルDX、データベース、マテリアルズ・インフォマティクス、新物質探索、無機結晶構造、熱電材料、磁石、準結晶、超伝導、電池材料",
+      "keywords_en": "Materials DX, database, materials informatics, new material discovery, inorganic crystal structures, thermoelectric materials, magnets, quasicrystals, superconductors, battery materials",
+      "samurai_id": "katsura_yukari",
+      "personal_page_url": "#"
+    },
+    {
+      "section": "researcher",
+      "photo": "images/members/柿沼洋.jpg",
+      "name_ja": "柿沼 洋, Hiroshi Kakinuma",
+      "name_en": "Hiroshi Kakinuma",
+      "title_ja": "招聘研究員",
+      "title_en": "Invited Researcher",
+      "additional_roles_ja": "東北大学 材料科学高等研究所 准教授 (ジュニア主任研究者) (博士 (工学))<br>(兼任) 東北大学  金属材料研究所",
+      "additional_roles_en": "Tohoku University Advanced Institute for Materials Research Associate Professor (Jr. Principal Investigator) (Ph.D (Eng.))<br>Tohoku University Institute for Materials Research",
+      "keywords_ja": "マテリアルズインフォマティクス、機械学習、腐食防食、耐食性、水素脆化、アルミニウム合金、ステンレス鋼・低合金鋼・炭素鋼、マグネシウム合金、化成処理、電気化学計測、金属材料、腐食科学、水素センサー、局部電気化学計測",
+      "keywords_en": "Materials informatics, machine learning, corrosion protection, corrosion resistance, hydrogen embrittlement, aluminum alloys, stainless/low-alloy/carbon steel, magnesium alloys, chemical conversion, electrochemical measurement, metallic materials, corrosion science, hydrogen sensor, local electrochemical measurement",
+      "samurai_id": "kakinuma_hiroshi"
+    },
+    {
+      "section": "postdoc",
+      "photo": "images/members/斉藤圭.jpg",
+      "name_ja": "齋藤 圭, Kei Saito",
+      "name_en": "Kei Saito",
+      "title_ja": "博士研究員",
+      "title_en": "Postdoctoral Researcher"
+    },
+    {
+      "section": "grad",
+      "photo": "images/members/ヤン　ジィ.jpg",
+      "name_ja": "ヤン ジイ, Yang Jiyi",
+      "name_en": "Yang Jiyi",
+      "title_ja": "NIMSジュニア研究員",
+      "title_en": "Graduate Research Assistant"
+    },
+    {
+      "section": "grad",
+      "photo": "images/members/タン　ティアンウェン.jpg",
+      "name_ja": "タン ティアンウェン, Tianwen Tang",
+      "name_en": "Tianwen Tang",
+      "title_ja": "NIMSジュニア研究員",
+      "title_en": "Graduate Research Assistant"
+    },
+    {
+      "section": "grad",
+      "photo": "images/members/Rani Sundas.png",
+      "name_ja": "ラニ スンダス, Rani Sundas",
+      "name_en": "Rani Sundas",
+      "title_ja": "NIMSジュニア研究員",
+      "title_en": "Graduate Research Assistant"
+    },
+    {
+      "section": "trainee",
+      "photo": "images/members/江 梓言.jpeg",
+      "name_ja": "江 梓言, Ziyan Jiang",
+      "name_en": "Ziyan Jiang",
+      "title_ja": "研修生 M2",
+      "title_en": "Trainee M2",
+      "affiliation_ja": "筑波大学大学院",
+      "affiliation_en": "University of Tsukuba Graduate School",
+      "period_ja": "2025年4月～",
+      "period_en": "Apr 2025 –"
+    },
+    {
+      "section": "trainee",
+      "photo": "images/members/Mishra Aniket.jpg",
+      "name_ja": "Mishra Aniket",
+      "name_en": "Mishra Aniket",
+      "title_ja": "インターン M1",
+      "title_en": "Intern M1",
+      "affiliation_ja": "Indian Institute of Technology, Kanpur",
+      "affiliation_en": "Indian Institute of Technology, Kanpur",
+      "period_ja": "2026年5月～",
+      "period_en": "May 2026 –"
+    },
+    {
+      "section": "trainee",
+      "photo": "images/members/Valentina Watanabe.jpg",
+      "name_ja": "Valentina Watanabe",
+      "name_en": "Valentina Watanabe",
+      "title_ja": "インターン B4",
+      "title_en": "Intern B4",
+      "affiliation_ja": "Trinity College Dublin",
+      "affiliation_en": "Trinity College Dublin",
+      "period_ja": "2026年5月～",
+      "period_en": "May 2026 –"
+    },
+    {
+      "section": "trainee",
+      "photo": "images/members/Thasleem Ibrahim.jpg",
+      "name_ja": "Thasleem Ibrahim",
+      "name_en": "Thasleem Ibrahim",
+      "title_ja": "インターン B3",
+      "title_en": "Intern B3",
+      "affiliation_ja": "National Institute of Technology, Tiruchirappalli",
+      "affiliation_en": "National Institute of Technology, Tiruchirappalli",
+      "period_ja": "2026年5月～",
+      "period_en": "May 2026 –"
+    },
+    {
+      "section": "trainee",
+      "photo": "images/members/Sajja Akshith.jpg",
+      "name_ja": "Sajja Akshith",
+      "name_en": "Sajja Akshith",
+      "title_ja": "インターン B3",
+      "title_en": "Intern B3",
+      "affiliation_ja": "National Institute of Technology, Tiruchirappalli",
+      "affiliation_en": "National Institute of Technology, Tiruchirappalli",
+      "period_ja": "2026年5月～",
+      "period_en": "May 2026 –"
+    },
+    {
+      "section": "trainee",
+      "photo": "images/members/ACHARYA Aditya.jpg",
+      "name_ja": "Acharya Aditya",
+      "name_en": "Acharya Aditya",
+      "title_ja": "インターン B3",
+      "title_en": "Intern B3",
+      "affiliation_ja": "Indian Institute of Technology (BHU) Varanasi",
+      "affiliation_en": "Indian Institute of Technology (BHU) Varanasi",
+      "period_ja": "2026年5月～",
+      "period_en": "May 2026 –"
+    },
+    {
+      "section": "visiting",
+      "photo": "images/members/藤田絵梨奈.jpg",
+      "name_ja": "藤田 絵梨奈, Erina Fujita",
+      "name_en": "Erina Fujita",
+      "title_ja": "客員研究員",
+      "title_en": "Visiting Researcher"
+    },
+    {
+      "section": "technical_staff",
+      "photo": "images/members/間藤智也.jpg",
+      "name_ja": "間藤 智也, Tomoya Mato",
+      "name_en": "Tomoya Mato",
+      "title_ja": "特任エンジニア<br>技術開発・共用部門 / 材料データプラットフォーム　データ基盤ユニット",
+      "title_en": "Project Engineer<br>Data Infrastructure Unit, Materials Data Platform, Advanced Engineering and Services Division",
+      "samurai_id": "mato_tomoya"
+    },
+    {
+      "section": "technical_staff",
+      "photo": "images/members/田中 敦美.jpg",
+      "name_ja": "田中 敦美, Atsumi Tanaka",
+      "name_en": "Atsumi Tanaka",
+      "title_ja": "テクニカルスタッフ",
+      "title_en": "Project Technical Staff"
+    },
+    {
+      "section": "technical_staff",
+      "photo": "images/members/DEWI Yana.jpg",
+      "name_ja": "デウィ ヤナ, Dewi Yana",
+      "name_en": "Dewi Yana",
+      "title_ja": "テクニカルスタッフ",
+      "title_en": "Project Technical Staff"
+    },
+    {
+      "section": "technical_staff",
+      "photo": "images/members/placeholder-person.svg",
+      "name_ja": "山本 由希, Yuki Yamamoto",
+      "name_en": "Yuki Yamamoto",
+      "title_ja": "テクニカルスタッフ",
+      "title_en": "Project Technical Staff"
+    },
+    {
+      "section": "technical_staff",
+      "photo": "images/members/placeholder-person.svg",
+      "name_ja": "谷口 祥子, Sachiko Taniguchi",
+      "name_en": "Sachiko Taniguchi",
+      "title_ja": "テクニカルスタッフ",
+      "title_en": "Project Technical Staff"
+    },
+    {
+      "section": "office_staff",
+      "photo": "images/members/永瀬幸子.png",
+      "name_ja": "永瀬 幸子, Sachiko Nagase",
+      "name_en": "Sachiko Nagase",
+      "title_ja": "オフィススタッフ<br>マテリアル基盤研究センター / 運営室",
+      "title_en": "Office Staff<br>Center for Basic Research on Materials / Management Office"
+    },
+    {
+      "section": "office_staff",
+      "photo": "images/members/placeholder-person.svg",
+      "name_ja": "春日 真奈美, Manami Kasuga",
+      "name_en": "Manami Kasuga",
+      "title_ja": "オフィススタッフ<br>マテリアル基盤研究センター / 運営室",
+      "title_en": "Office Staff<br>Center for Basic Research on Materials / Management Office"
+    },
+    {
+      "section": "office_staff",
+      "photo": "images/members/舘野明美.jpg",
+      "name_ja": "舘野 明美, Akemi Tateno",
+      "name_en": "Akemi Tateno",
+      "title_ja": "オフィススタッフ<br>技術開発・共用部門 / 運営室",
+      "title_en": "Office Staff<br>Advanced Engineering and Services Division / Management Office"
+    },
+    {
+      "section": "alumni",
+      "text_ja": "Hang Dong（University of New South Wales (UNSW) Canberra）2026年5月～2026年7月",
+      "text_en": "Hang Dong (University of New South Wales (UNSW) Canberra) May 2026 – Jul 2026"
+    },
+    {
+      "section": "alumni",
+      "text_ja": "柳川 真之裕（筑波大学大学院）～2026年3月",
+      "text_en": "Masanohiro Yanagawa (University of Tsukuba Graduate School) – Mar 2026"
+    },
+    {
+      "section": "alumni",
+      "text_ja": "陳 旭斐（筑波大学大学院）～2026年3月",
+      "text_en": "Xufei Chen (University of Tsukuba Graduate School) – Mar 2026"
+    },
+    {
+      "section": "alumni",
+      "text_ja": "Gruen Florian（京都大学大学院）2026年1月～2026年3月",
+      "text_en": "Florian Gruen (Kyoto University Graduate School) Jan 2026 – Mar 2026"
+    },
+    {
+      "section": "alumni",
+      "text_ja": "劉 大元（筑波大学大学院）～2026年2月",
+      "text_en": "Dayuan Liu (University of Tsukuba Graduate School) – Feb 2026"
+    },
+    {
+      "section": "alumni",
+      "text_ja": "Cecília Nemessányi（Budapest University of Technology and Economics / Architect）2025年6月～2026年1月",
+      "text_en": "Cecília Nemessányi (Budapest University of Technology and Economics / Architect) Jun 2025 – Jan 2026"
+    },
+    {
+      "section": "alumni",
+      "text_ja": "Kaushik Raj Pyla（University of New South Wales (UNSW) Canberra）2025年5月～2025年8月",
+      "text_en": "Kaushik Raj Pyla (University of New South Wales (UNSW) Canberra) May 2025 – Aug 2025"
+    },
+    {
+      "section": "alumni",
+      "text_ja": "RYJACEK Jiri（Czech Technical University）2025年6月～2025年7月",
+      "text_en": "Jiri Ryjacek (Czech Technical University) Jun 2025 – Jul 2025"
+    }
+  ]
+}
