@@ -2,6 +2,13 @@
 """
 CrossRef APIで各研究者の新規論文を検出し、data/news.jsonに追加するスクリプト
 GitHub Actionsのcronで定期実行される
+
+投稿主体の決定ルール:
+1) 第1著者が members.json のメンバー（現行スタッフ・学生）→ そのメンバーで投稿
+   （学生でも第1著者が優先される）
+2) 第1著者が Alumni → MMG 研究者（researchers.json の 7名）が共著者にいれば
+   Alumni 名義で投稿（役職なし）。共著者にいなければスキップ
+3) それ以外 → 論文検出のトリガーとなった researcher で投稿（従来通り）
 """
 
 import json
@@ -15,6 +22,7 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).parent
 DATA_DIR = SCRIPT_DIR.parent / "data"
 RESEARCHERS_PATH = DATA_DIR / "researchers.json"
+MEMBERS_PATH = DATA_DIR / "members.json"
 NEWS_PATH = DATA_DIR / "news.json"
 
 CROSSREF_API = "https://api.crossref.org/works"
@@ -146,10 +154,119 @@ def is_open_access(item):
     return False
 
 
+# ── 第1著者マッチング（Members / Alumni） ──
+
+def load_members():
+    """members.json をロードして members 配列 (Alumni 含む) を返す"""
+    if not MEMBERS_PATH.exists():
+        return []
+    data = json.loads(MEMBERS_PATH.read_text(encoding="utf-8"))
+    return data.get("members", [])
+
+
+def normalize_name(s):
+    """名前を照合用に正規化: lowercase + トークン分解 + 昇順で結合。
+    "Yukari Katsura" と "Katsura Yukari" のような順序違いも一致させる。"""
+    if not s:
+        return ""
+    tokens = s.replace(",", " ").split()
+    tokens = [t.lower().strip(". ") for t in tokens if t]
+    return " ".join(sorted(tokens))
+
+
+def extract_alumni_name(text):
+    """Alumni の text_ja / text_en から名前部分（先頭）を切り出す。
+    例: "Hang Dong（UNSW Canberra）2026年5月～" → "Hang Dong"
+        "Hang Dong (UNSW Canberra) May 2026 – Jul 2026" → "Hang Dong" """
+    if not text:
+        return ""
+    for sep in ("（", "("):
+        if sep in text:
+            return text.split(sep, 1)[0].strip()
+    return text.strip()
+
+
+def member_english_name_candidates(member):
+    """マッチング用の英語名候補を返す"""
+    cands = []
+    ne = member.get("name_en", "")
+    if ne:
+        cands.append(ne)
+    # name_ja が「和名, English」形式なら英語部分も候補にする
+    nj = member.get("name_ja", "")
+    if "," in nj:
+        cands.append(nj.split(",", 1)[1].strip())
+    # Alumni は text_en / text_ja から抽出
+    if member.get("section") == "alumni":
+        for key in ("text_en", "text_ja"):
+            n = extract_alumni_name(member.get(key, ""))
+            if n:
+                cands.append(n)
+    return cands
+
+
+def display_name_and_position(member):
+    """News 表示用の (name_ja, position_ja) を返す。
+    Alumni は役職なし。"""
+    if member.get("section") == "alumni":
+        return extract_alumni_name(member.get("text_ja", "")), ""
+    nj = member.get("name_ja", "")
+    display = nj.split(",", 1)[0].strip() if "," in nj else nj
+    title = member.get("title_ja", "")
+    # title は複数行を <br> で連結している場合があるので1行目のみ
+    position = title.split("<br>", 1)[0].strip() if title else ""
+    return display, position
+
+
+def find_matching_member(author_name, members):
+    """CrossRef の著者名にマッチする member を返す。なければ None"""
+    target = normalize_name(author_name)
+    if not target:
+        return None
+    for m in members:
+        for cand in member_english_name_candidates(m):
+            if normalize_name(cand) == target:
+                return m
+    return None
+
+
+def get_first_author_name(paper):
+    """CrossRef paper の第1著者の英語名を返す"""
+    authors = paper.get("author", [])
+    if not authors:
+        return ""
+    first = authors[0]
+    given = first.get("given", "")
+    family = first.get("family", "")
+    if given and family:
+        return f"{given} {family}"
+    return family or given
+
+
+def paper_has_researcher(paper, researchers):
+    """論文の著者リストに researchers (7名) のいずれかが含まれるか判定。
+    CrossRef は ORCID フィルタで取得しているので通常は True になるが、
+    Alumni 第1著者ケースで念のため確認する。"""
+    author_normed = set()
+    for a in paper.get("author", []):
+        g = a.get("given", "")
+        f = a.get("family", "")
+        if g and f:
+            author_normed.add(normalize_name(f"{g} {f}"))
+        elif f:
+            author_normed.add(normalize_name(f))
+    for r in researchers:
+        ne = r.get("name_en", "")
+        if ne and normalize_name(ne) in author_normed:
+            return True
+    return False
+
+
 # ── ニュースエントリの生成 ──
 
-def build_news_entry(researcher, paper):
-    """論文情報からニュースエントリを生成する"""
+def build_news_entry(name_ja, position_ja, paper):
+    """論文情報からニュースエントリを生成する。
+    name_ja + position_ja でタイトル冒頭を組み立てる（Alumni は position_ja=""）。"""
     doi = paper.get("DOI", "")
     title_list = paper.get("title", [])
     paper_title = title_list[0] if title_list else ""
@@ -157,10 +274,7 @@ def build_news_entry(researcher, paper):
     date_parts = extract_date_parts(paper)
 
     # タイトル: {氏名}{職位}の論文が{ジャーナル}に掲載されました
-    news_title = (
-        f"{researcher['name_ja']}{researcher['position_ja']}の論文が"
-        f"{journal}に掲載されました"
-    )
+    news_title = f"{name_ja}{position_ja}の論文が{journal}に掲載されました"
 
     # 本文
     body_lines = []
@@ -202,10 +316,12 @@ def build_news_entry(researcher, paper):
 def main():
     researchers = load_json(RESEARCHERS_PATH)
     news = load_json(NEWS_PATH)
+    members = load_members()
     existing_dois = get_existing_dois(news)
 
     from_date = (datetime.now() - timedelta(days=LOOKBACK_DAYS)).strftime("%Y-%m-%d")
     print(f"Checking papers published since {from_date}")
+    print(f"Members loaded for first-author matching: {len(members)}")
 
     new_entries = []
 
@@ -231,7 +347,24 @@ def main():
                 print(f"  Skip (existing): {title}...")
                 continue
 
-            entry = build_news_entry(researcher, paper)
+            # 第1著者をチェックし、投稿主体を決定する
+            first_author = get_first_author_name(paper)
+            member = find_matching_member(first_author, members)
+
+            if member:
+                is_alumni = member.get("section") == "alumni"
+                if is_alumni and not paper_has_researcher(paper, researchers):
+                    print(f"  Skip (alumni first author, no MMG co-author): {first_author}")
+                    continue
+                name_ja, position_ja = display_name_and_position(member)
+                who = "alumni" if is_alumni else "member"
+                print(f"  First author is a {who}: {name_ja}")
+            else:
+                # 第1著者が Members にいない → 検出した researcher で投稿（従来通り）
+                name_ja = researcher["name_ja"]
+                position_ja = researcher["position_ja"]
+
+            entry = build_news_entry(name_ja, position_ja, paper)
             new_entries.append(entry)
             existing_dois.add(doi.lower())
 
