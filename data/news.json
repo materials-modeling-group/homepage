@@ -29,6 +29,17 @@
     "images": []
   },
   {
+    "date": "2026-07-01",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "出村雅彦グループリーダーの論文がJournal of Materials Research and Technologyに掲載されました",
+    "title_en": "",
+    "paper_title": "Statistical Evaluation of Phase Fractions in a MoSiBTiC Alloy by Machine-Learning-Assisted Segmentation of Scanning Electron Microscopy Images",
+    "doi": "10.1016/j.jmrt.2026.07.282",
+    "body": "著者：Chihana Kudo, Masahiko Demura, Akihiro Endo, Kenji Nagata, Kyosuke Yoshimi<br>ジャーナル：Journal of Materials Research and Technology<br>オンライン公開：2026年7月<br>DOI：10.1016/j.jmrt.2026.07.282<br>備考：Open Access",
+    "body_en": ""
+  },
+  {
     "date": "2026-06-23",
     "category": "お知らせ",
     "category_en": "Announcement",
@@ -57,6 +68,17 @@
     "paper_title": "The effect of long‑term thermal aging on corrosion of Z3CN20‑09M cast austenitic stainless steel in simulated PWR primary water",
     "doi": "10.1016/j.jnucmat.2026.156818",
     "body": "著者：Jun Xiao, Ting Xiao, Xiang Yu Zhong, Yu Qi Zheng, Hiroshi Kakinuma, Qi Xu, Hao Wang, Eiji Akiyama, Tetsuo Shoji<br>ジャーナル：Journal of Nuclear Materials<br>論文番号：156818<br>オンライン公開：2026年6月<br>DOI：10.1016/j.jnucmat.2026.156818",
+    "body_en": ""
+  },
+  {
+    "date": "2026-06-01",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "齋藤圭博士研究員の論文がScripta Materialiaに掲載されました",
+    "title_en": "",
+    "paper_title": "Activation energies of hydrogen desorbed from edge dislocation cores and vacancies in α-iron",
+    "doi": "10.1016/j.scriptamat.2026.117277",
+    "body": "著者：Keisuke Akiyama, Yuri Sugiyama, Kei Saito, Kenichi Takai<br>ジャーナル：Scripta Materialia<br>巻号：Vol. 278<br>論文番号：117277<br>オンライン公開：2026年6月<br>DOI：10.1016/j.scriptamat.2026.117277",
     "body_en": ""
   },
   {
@@ -356,6 +378,17 @@
     "images": []
   },
   {
+    "date": "2025-12-01",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "齋藤圭博士研究員の論文がTetsu-to-Haganeに掲載されました",
+    "title_en": "",
+    "paper_title": "Effect of Hydrogen Concentration on Hydrogen Diffusion Coefficient in Tempered Martensitic Steel",
+    "doi": "10.2355/tetsutohagane.tetsu-2025-057",
+    "body": "著者：Yuji Sakiyama, Tomohiko Omura, Kei Saito, Kenichi Takai<br>ジャーナル：Tetsu-to-Hagane<br>巻号：Vol. 111, Issue 16<br>論文番号：TETSU-2025-057<br>オンライン公開：2025年12月1日<br>DOI：10.2355/tetsutohagane.tetsu-2025-057",
+    "body_en": ""
+  },
+  {
     "date": "2025-11-28",
     "category": "お知らせ",
     "category_en": "Announcement",
@@ -477,6 +510,17 @@
     "title": "桂ゆかり主任研究員が27th iCeMS International Symposium “Self-Assembly Science for Unlocking Life’s Secrets”で招待講演を行いました",
     "title_en": "",
     "body": "講演タイトル：Crystal Structure Simulator: An Interactive Web Tool for Inorganic Crystal Structure Design by Assembling Atomic Delaunay Tetrahedra<br>学会名：27th iCeMS International Symposium “Self-Assembly Science for Unlocking Life’s Secrets”<br>日時：2025年10月2日 - 2025年10月3日<br>発表者：KATSURA, Yukari",
+    "body_en": ""
+  },
+  {
+    "date": "2025-10-01",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "齋藤圭博士研究員の論文がJournal of Membrane Scienceに掲載されました",
+    "title_en": "",
+    "paper_title": "Effects of hydrogen blocking and trapping by point defects on hydrogen diffusivity in B2-type PdCu alloys: Modeling and experimental analysis",
+    "doi": "10.1016/j.memsci.2025.124401",
+    "body": "著者：Akihiro Mitsuhara, Kei Saito, Hiroshi Yukawa, Kenichi Takai, Hajime Kimizuka<br>ジャーナル：Journal of Membrane Science<br>巻号：Vol. 734<br>論文番号：124401<br>オンライン公開：2025年10月<br>DOI：10.1016/j.memsci.2025.124401<br>備考：Open Access",
     "body_en": ""
   },
   {
