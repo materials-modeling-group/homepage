@@ -152,66 +152,6 @@
       "period_en": "Apr 2025 –"
     },
     {
-      "section": "trainee",
-      "photo": "images/members/Mishra Aniket.jpg",
-      "name_ja": "Mishra Aniket",
-      "name_en": "Mishra Aniket",
-      "title_ja": "インターン M1",
-      "title_en": "Intern M1",
-      "affiliation_ja": "Indian Institute of Technology, Kanpur",
-      "affiliation_en": "Indian Institute of Technology, Kanpur",
-      "period_ja": "2026年5月～",
-      "period_en": "May 2026 –"
-    },
-    {
-      "section": "trainee",
-      "photo": "images/members/Valentina Watanabe.jpg",
-      "name_ja": "Valentina Watanabe",
-      "name_en": "Valentina Watanabe",
-      "title_ja": "インターン B4",
-      "title_en": "Intern B4",
-      "affiliation_ja": "Trinity College Dublin",
-      "affiliation_en": "Trinity College Dublin",
-      "period_ja": "2026年5月～",
-      "period_en": "May 2026 –"
-    },
-    {
-      "section": "trainee",
-      "photo": "images/members/Thasleem Ibrahim.jpg",
-      "name_ja": "Thasleem Ibrahim",
-      "name_en": "Thasleem Ibrahim",
-      "title_ja": "インターン B3",
-      "title_en": "Intern B3",
-      "affiliation_ja": "National Institute of Technology, Tiruchirappalli",
-      "affiliation_en": "National Institute of Technology, Tiruchirappalli",
-      "period_ja": "2026年5月～",
-      "period_en": "May 2026 –"
-    },
-    {
-      "section": "trainee",
-      "photo": "images/members/Sajja Akshith.jpg",
-      "name_ja": "Sajja Akshith",
-      "name_en": "Sajja Akshith",
-      "title_ja": "インターン B3",
-      "title_en": "Intern B3",
-      "affiliation_ja": "National Institute of Technology, Tiruchirappalli",
-      "affiliation_en": "National Institute of Technology, Tiruchirappalli",
-      "period_ja": "2026年5月～",
-      "period_en": "May 2026 –"
-    },
-    {
-      "section": "trainee",
-      "photo": "images/members/ACHARYA Aditya.jpg",
-      "name_ja": "Acharya Aditya",
-      "name_en": "Acharya Aditya",
-      "title_ja": "インターン B3",
-      "title_en": "Intern B3",
-      "affiliation_ja": "Indian Institute of Technology (BHU) Varanasi",
-      "affiliation_en": "Indian Institute of Technology (BHU) Varanasi",
-      "period_ja": "2026年5月～",
-      "period_en": "May 2026 –"
-    },
-    {
       "section": "visiting",
       "photo": "images/members/藤田絵梨奈.jpg",
       "name_ja": "藤田 絵梨奈, Erina Fujita",
@@ -283,6 +223,31 @@
       "name_en": "Akemi Tateno",
       "title_ja": "オフィススタッフ<br>技術開発・共用部門 / 運営室",
       "title_en": "Office Staff<br>Advanced Engineering and Services Division / Management Office"
+    },
+    {
+      "section": "alumni",
+      "text_ja": "Mishra Aniket（Indian Institute of Technology, Kanpur）2026年5月～2026年8月",
+      "text_en": "Mishra Aniket (Indian Institute of Technology, Kanpur) May 2026 – Aug 2026"
+    },
+    {
+      "section": "alumni",
+      "text_ja": "Valentina Watanabe（Trinity College Dublin）2026年5月～2026年8月",
+      "text_en": "Valentina Watanabe (Trinity College Dublin) May 2026 – Aug 2026"
+    },
+    {
+      "section": "alumni",
+      "text_ja": "Thasleem Ibrahim（National Institute of Technology, Tiruchirappalli）2026年5月～2026年8月",
+      "text_en": "Thasleem Ibrahim (National Institute of Technology, Tiruchirappalli) May 2026 – Aug 2026"
+    },
+    {
+      "section": "alumni",
+      "text_ja": "Sajja Akshith（National Institute of Technology, Tiruchirappalli）2026年5月～2026年8月",
+      "text_en": "Sajja Akshith (National Institute of Technology, Tiruchirappalli) May 2026 – Aug 2026"
+    },
+    {
+      "section": "alumni",
+      "text_ja": "Acharya Aditya（Indian Institute of Technology (BHU) Varanasi）2026年5月～2026年8月",
+      "text_en": "Acharya Aditya (Indian Institute of Technology (BHU) Varanasi) May 2026 – Aug 2026"
     },
     {
       "section": "alumni",
