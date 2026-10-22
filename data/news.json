@@ -1,5 +1,18 @@
 [
   {
+    "date": "2026-10-22",
+    "category": "お知らせ",
+    "category_en": "Announcement",
+    "title": "テスト",
+    "title_en": "",
+    "url": "",
+    "paper_title": "",
+    "doi": "",
+    "body": "test",
+    "body_en": "test",
+    "images": []
+  },
+  {
     "date": "2026-10-15",
     "category": "お知らせ",
     "category_en": "Announcement",
