@@ -16,6 +16,14 @@ function escapeHtml(s) {
   return d.innerHTML;
 }
 
+// title / additional_roles は <br> 等を含むリッチテキスト。DOMPurify でタグレベルの
+// 無害化を行い、未ロード時は fail-closed で escape する。
+function sanitizeHtml(s) {
+  if (s == null) return '';
+  if (typeof DOMPurify !== 'undefined') return DOMPurify.sanitize(String(s));
+  return escapeHtml(String(s));
+}
+
 // _en が空なら _ja にフォールバック（翻訳漏れがあっても表示は崩れない）
 function pick(item, key, lang) {
   if (lang === 'en') {
@@ -60,9 +68,9 @@ function buildResearcherCard(item, lang) {
 
   var infoParts = ['<h3 class="member-name">' + name + '</h3>'];
   var titleHtml = pick(item, 'title', lang);
-  if (titleHtml) infoParts.push('<p class="member-title-label">' + titleHtml + '</p>');
+  if (titleHtml) infoParts.push('<p class="member-title-label">' + sanitizeHtml(titleHtml) + '</p>');
   var rolesHtml = pick(item, 'additional_roles', lang);
-  if (rolesHtml) infoParts.push('<p class="member-additional-roles">' + rolesHtml + '</p>');
+  if (rolesHtml) infoParts.push('<p class="member-additional-roles">' + sanitizeHtml(rolesHtml) + '</p>');
   var researchTitle = pick(item, 'research_title', lang);
   if (researchTitle) infoParts.push('<p class="research-title">' + escapeHtml(researchTitle) + '</p>');
   var keywords = pick(item, 'keywords', lang);
@@ -80,7 +88,7 @@ function buildSimpleCard(item, lang) {
   var name = escapeHtml(pick(item, 'name', lang));
   var titleParts = [];
   var titleHtml = pick(item, 'title', lang);
-  if (titleHtml) titleParts.push(titleHtml);
+  if (titleHtml) titleParts.push(sanitizeHtml(titleHtml));
   var affiliation = pick(item, 'affiliation', lang);
   if (affiliation) titleParts.push(escapeHtml(affiliation));
   var period = pick(item, 'period', lang);
