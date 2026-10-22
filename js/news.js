@@ -15,7 +15,7 @@ function escapeHtml(s) {
 function buildTitleHtml(item, title) {
   var safeTitle = escapeHtml(title);
   if (item.url) {
-    return '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener">' + safeTitle + '</a>';
+    return '<a href="' + escapeHtml(item.url) + '" target="_blank" rel="noopener noreferrer">' + safeTitle + '</a>';
   }
   return safeTitle;
 }
@@ -27,7 +27,7 @@ function buildBodyHtml(item, body) {
   var paperTitleHtml;
   if (item.doi) {
     var safeDoi = escapeHtml(item.doi);
-    paperTitleHtml = '<a href="https://doi.org/' + safeDoi + '" target="_blank" rel="noopener">' + safePaperTitle + '</a>';
+    paperTitleHtml = '<a href="https://doi.org/' + safeDoi + '" target="_blank" rel="noopener noreferrer">' + safePaperTitle + '</a>';
   } else {
     paperTitleHtml = safePaperTitle;
   }
