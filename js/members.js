@@ -39,13 +39,13 @@ function buildButtons(item) {
   if (item.samurai_id) {
     buttons.push(
       '<a href="' + SAMURAI_BASE + encodeURIComponent(item.samurai_id) +
-      '" class="samurai-btn" target="_blank">SAMURAI</a>'
+      '" class="samurai-btn" target="_blank" rel="noopener noreferrer">SAMURAI</a>'
     );
   }
   if (item.personal_page_url) {
     buttons.push(
       '<a href="' + escapeHtml(item.personal_page_url) +
-      '" class="personal-page-btn" target="_blank">Personal Page</a>'
+      '" class="personal-page-btn" target="_blank" rel="noopener noreferrer">Personal Page</a>'
     );
   }
   if (!buttons.length) return '';
