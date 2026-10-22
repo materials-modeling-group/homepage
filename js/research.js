@@ -20,7 +20,13 @@ document.addEventListener('DOMContentLoaded', function () {
     })
     .then(function (md) {
       var html = window.marked ? window.marked.parse(md) : md;
-      target.innerHTML = html;
+      // marked v14 はデフォルトで <img onerror> 等を通すため DOMPurify で無害化する。
+      // DOMPurify が未ロードならコンテンツを捨ててエラー表示に落とす（fail-closed）。
+      if (typeof DOMPurify === 'undefined') {
+        target.innerHTML = '<p class="research-loading">' + errorText + '</p>';
+        return;
+      }
+      target.innerHTML = DOMPurify.sanitize(html);
     })
     .catch(function () {
       target.innerHTML = '<p class="research-loading">' + errorText + '</p>';

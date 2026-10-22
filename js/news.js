@@ -11,6 +11,14 @@ function escapeHtml(s) {
   return d.innerHTML;
 }
 
+// body / body_en は <br> 等を含むリッチテキストなので DOMPurify でサニタイズする。
+// DOMPurify が未ロード（CDN 失敗 / SRI 不一致）の場合は fail-closed で escape する。
+function sanitizeHtml(s) {
+  if (s == null) return '';
+  if (typeof DOMPurify !== 'undefined') return DOMPurify.sanitize(String(s));
+  return escapeHtml(String(s));
+}
+
 // urlが指定されていればタイトルをリンクで囲む
 function buildTitleHtml(item, title) {
   var safeTitle = escapeHtml(title);
@@ -22,7 +30,8 @@ function buildTitleHtml(item, title) {
 
 // paper_titleがあれば本文の先頭に表示する。doiが指定されていればDOIリンクになる。
 function buildBodyHtml(item, body) {
-  if (!item.paper_title) return body || '';
+  var safeBody = sanitizeHtml(body);
+  if (!item.paper_title) return safeBody;
   var safePaperTitle = escapeHtml(item.paper_title);
   var paperTitleHtml;
   if (item.doi) {
@@ -31,7 +40,7 @@ function buildBodyHtml(item, body) {
   } else {
     paperTitleHtml = safePaperTitle;
   }
-  return '<strong>' + paperTitleHtml + '</strong>' + (body ? '<br>' + body : '');
+  return '<strong>' + paperTitleHtml + '</strong>' + (safeBody ? '<br>' + safeBody : '');
 }
 
 // 画像パスは news.json で相対パス("images/news/foo.jpg") のまま入っているので、
