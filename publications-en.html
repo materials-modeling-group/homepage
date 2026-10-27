@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; font-src 'self'; connect-src 'self' https://raw.githubusercontent.com; frame-src https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self' mailto:;">
   <title>Publications - Materials Modeling Group</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,8 +12,8 @@
     <div class="navbar-inner">
       <a href="index-en.html" class="navbar-brand">
         <div class="navbar-logos">
-          <img src="images/logo_nims_20190425mark.png" alt="NIMS" class="logo-link" onclick="event.preventDefault();event.stopPropagation();window.open(&#39;https://www.nims.go.jp/&#39;,&#39;_blank&#39;)" style="cursor:pointer">
-          <img src="images/cbrm_logo_tate.png" alt="CBRM" class="logo-link" onclick="event.preventDefault();event.stopPropagation();window.open(&#39;https://www.nims.go.jp/cbrm/&#39;,&#39;_blank&#39;)" style="cursor:pointer">
+          <img src="images/logo_nims_20190425mark.png" alt="NIMS" class="logo-link" data-href="https://www.nims.go.jp/" style="cursor:pointer">
+          <img src="images/cbrm_logo_tate.png" alt="CBRM" class="logo-link" data-href="https://www.nims.go.jp/cbrm/" style="cursor:pointer">
         </div>
         <span class="navbar-brand-text"><span>M</span>aterials <span>M</span>odeling <span>G</span><span class="group-full">roup</span><span class="group-short">r.</span></span>
       </a>

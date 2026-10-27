@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline'; img-src 'self' https: data:; font-src 'self'; connect-src 'self' https://raw.githubusercontent.com; frame-src https://maps.google.com https://www.google.com; object-src 'none'; base-uri 'self'; form-action 'self' mailto:;">
   <title>Contact - Materials Modeling Group</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -11,8 +12,8 @@
     <div class="navbar-inner">
       <a href="index-en.html" class="navbar-brand">
         <div class="navbar-logos">
-          <img src="images/logo_nims_20190425mark.png" alt="NIMS" class="logo-link" onclick="event.preventDefault();event.stopPropagation();window.open(&#39;https://www.nims.go.jp/&#39;,&#39;_blank&#39;)" style="cursor:pointer">
-          <img src="images/cbrm_logo_tate.png" alt="CBRM" class="logo-link" onclick="event.preventDefault();event.stopPropagation();window.open(&#39;https://www.nims.go.jp/cbrm/&#39;,&#39;_blank&#39;)" style="cursor:pointer">
+          <img src="images/logo_nims_20190425mark.png" alt="NIMS" class="logo-link" data-href="https://www.nims.go.jp/" style="cursor:pointer">
+          <img src="images/cbrm_logo_tate.png" alt="CBRM" class="logo-link" data-href="https://www.nims.go.jp/cbrm/" style="cursor:pointer">
         </div>
         <span class="navbar-brand-text"><span>M</span>aterials <span>M</span>odeling <span>G</span><span class="group-full">roup</span><span class="group-short">r.</span></span>
       </a>
@@ -46,7 +47,7 @@
       <section class="contact-form-section fade-in-up">
         <h2 class="contact-section-title">Inquiry Form</h2>
         <div class="form-card" id="form-container">
-          <form id="contact-form" onsubmit="return handleSubmit(event)" novalidate>
+          <form id="contact-form" novalidate>
             <div class="form-group">
               <label for="name">Name <span class="req">*</span></label>
               <input type="text" id="name" name="name" autocomplete="name" required>
@@ -84,7 +85,7 @@
           </div>
           <h2>Thank you for your inquiry</h2>
           <p>Your email client should have opened.<br>Please review the message and send it.</p>
-          <button class="btn-primary" onclick="resetForm()">New Inquiry</button>
+          <button class="btn-primary" id="reset-form-btn">New Inquiry</button>
         </div>
       </section>
 

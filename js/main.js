@@ -5,6 +5,20 @@
 document.addEventListener('DOMContentLoaded', function () {
 
   // ----------------------------------------
+  // Logo click (CSP 対応: インライン onclick から移行)
+  // ----------------------------------------
+  // ロゴは親の <a class="navbar-brand"> 内にあるが、クリック時は親遷移を止めて
+  // data-href で指定した外部サイト (NIMS / CBRM) を新規タブで開く。
+  document.querySelectorAll('.logo-link[data-href]').forEach(function (logo) {
+    logo.addEventListener('click', function (e) {
+      e.preventDefault();
+      e.stopPropagation();
+      var url = logo.getAttribute('data-href');
+      if (url) window.open(url, '_blank', 'noopener,noreferrer');
+    });
+  });
+
+  // ----------------------------------------
   // Hamburger Menu Toggle
   // ----------------------------------------
   const hamburger = document.querySelector('.hamburger');
