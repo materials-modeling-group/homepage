@@ -158,6 +158,18 @@ document.addEventListener('keydown', function (event) {
   }
 });
 
+// CSP 対応: モーダルの onclick インラインを addEventListener に移行。
+document.addEventListener('DOMContentLoaded', function () {
+  var overlay = document.getElementById('modal');
+  if (!overlay) return;
+  // オーバーレイクリックで閉じる（内側 .modal は stopPropagation で透過）
+  overlay.addEventListener('click', closeModal);
+  var inner = overlay.querySelector('.modal');
+  if (inner) inner.addEventListener('click', function (e) { e.stopPropagation(); });
+  var closeBtn = overlay.querySelector('.modal-close');
+  if (closeBtn) closeBtn.addEventListener('click', function () { closeModal(); });
+});
+
 // GitHub上の news.json を直接読みに行く。これにより、NIMSサーバー等にホストしても
 // ニュース更新（Admin → GAS → GitHub repo）の結果が即座に公開ページに反映される。
 // （ホスト先を問わず常に GitHub の最新を参照する）

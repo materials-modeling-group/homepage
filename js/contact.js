@@ -59,7 +59,7 @@
     return valid ? values : null;
   }
 
-  window.handleSubmit = function (event) {
+  function handleSubmit(event) {
     event.preventDefault();
     var v = validate();
     if (!v) return false;
@@ -78,12 +78,20 @@
     $('form-container').classList.add('hidden');
     $('success-container').classList.remove('hidden');
     return false;
-  };
+  }
 
-  window.resetForm = function () {
+  function resetForm() {
     $('contact-form').reset();
     $('form-container').classList.remove('hidden');
     $('success-container').classList.add('hidden');
     FIELDS.forEach(function (id) { showError(id, false); });
-  };
+  }
+
+  // CSP 対応: HTML 側の onsubmit / onclick インラインを撤去し、ここで addEventListener する。
+  document.addEventListener('DOMContentLoaded', function () {
+    var form = $('contact-form');
+    if (form) form.addEventListener('submit', handleSubmit);
+    var resetBtn = $('reset-form-btn');
+    if (resetBtn) resetBtn.addEventListener('click', resetForm);
+  });
 })();
